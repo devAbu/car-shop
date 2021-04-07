@@ -1,3 +1,121 @@
-@primary _color = #d01818;
-@secondary _color = #253241;
-@third _color = white;
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+*:focus {
+  outline: none;
+}
+body {
+  background-color: #f2f2f2;
+}
+.navbar {
+  padding: 1em 5%;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 75px;
+}
+.navbar .navbar_left {
+  margin-left: 10vh;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  z-index: 9;
+}
+.navbar .navbar_left li {
+  list-style-type: none;
+}
+.navbar .navbar_left li a {
+  color: #415772;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.navbar .navbar_left li a:hover {
+  color: #253241;
+}
+.navbar .navbar_left li a.active {
+  color: #a21313;
+}
+.hero {
+  height: 95vh;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero h1 {
+  font-size: clamp(14px, 5em, 6vw);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 25%;
+  top: 25%;
+  color: #a21313;
+}
+.buy-options {
+  background-color: white;
+  margin: -5% 15% 0 15%;
+  padding: 3em 5em;
+  border-radius: 0.3rem;
+  display: flex;
+  -webkit-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+  -moz-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+  box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+}
+.buy-options .row {
+  width: 100%;
+  display: flex;
+}
+.buy-options .row .brand-selection {
+  margin: 0 1em;
+}
+.buy-options .row .brand-selection p {
+  color: #253241;
+  font-size: clamp(14px, 22px, 2em);
+}
+.buy-options .row .brand-selection p span {
+  color: #7d97b5;
+}
+.buy-options .row .brand-selection select {
+  padding: 0.8em;
+  color: #253241;
+  border-radius: 0.3rem;
+  background-color: #f2f2f2;
+  line-height: 1.5;
+  font-size: 18px;
+  cursor: pointer;
+  padding-right: 1.75rem;
+  vertical-align: middle;
+}
+.buy-options .row .brand-selection select:hover {
+  -webkit-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
+  -moz-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
+  box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
+  background-color: white;
+}
+.buy-options .row .brand-selection select:focus {
+  border-color: #ed6161;
+  outline: 0;
+}
+.buy-options .row .brand-selection select option {
+  text-transform: uppercase;
+}
+.buy-options .row .brand-selection .btn-primary {
+  margin-left: 0.5em;
+  text-transform: uppercase;
+  color: white;
+  background-color: #d01818;
+  padding: 1em 2em;
+  border-radius: 0.25rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}

@@ -5,7 +5,6 @@ Car online shop
 - Contact
 - Shop
 - Single car
-- My Profile - Settings
 - Sell car
 - Admin Panel
   - Add/Edit/Remove Car
