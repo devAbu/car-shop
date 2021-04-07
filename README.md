@@ -5,9 +5,8 @@ Car online shop
 - Contact
 - Shop
 - Single car
-- Login / Register
 - My Profile - Settings
-- Add car
+- Sell car
 - Admin Panel
-  - Add new Car
+  - Add/Edit/Remove Car
   - Accept or Reject users' car
