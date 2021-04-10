@@ -1,4 +1,5 @@
 @import "colors.less";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Oxygen&family=Poppins&family=Raleway&family=Ubuntu&display=swap");
 
 * {
   padding: 0;
@@ -12,6 +13,7 @@
 
 body {
   background-color: darken(@third_color, 5%);
+  font-family: "Oxygen", sans-serif;
 }
 
 .navbar {
@@ -70,14 +72,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     left: 25%;
-    top: 25%;
+    top: 20%;
     color: darken(@primary_color, 10%);
   }
 }
 
 .buy-options {
   background-color: @third_color;
-  margin: -5% 15% 0 15%;
+  margin: -5% 15% 10% 15%;
   padding: 3em 5em;
   border-radius: 0.3rem;
   display: flex;
@@ -137,6 +139,113 @@ body {
         vertical-align: middle;
         border: 1px solid transparent;
         line-height: 1.5;
+      }
+    }
+  }
+}
+
+.featured-cars {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3em;
+  font-family: "ubuntu", sans-serif;
+
+  .car-1 {
+    width: 45%;
+    background-color: lighten(@secondary_color, 5%);
+    border-radius: 0.8rem;
+    margin: 1em;
+    img {
+      height: 80%;
+      width: 100%;
+    }
+    .car-info {
+      color: @third_color;
+      padding: 0.5em 1.5em;
+      h3 {
+        margin-bottom: 1rem;
+      }
+      hr {
+        border: 1px solid rgb(95, 95, 95);
+        opacity: 0.4;
+        margin-bottom: 1rem;
+      }
+      .tags {
+        margin-top: 0.5rem;
+        overflow: hidden;
+
+        span {
+          margin: 0 0.5em;
+          padding: 2em 0.5em;
+          color: darken(@third_color, 40%);
+        }
+
+        .year,
+        .price {
+          color: @third_color;
+        }
+
+        .year {
+          background-color: @primary_color;
+          padding: 0.5em 1em;
+          display: inline-block;
+          vertical-align: middle;
+          border-radius: 0.35rem;
+        }
+      }
+    }
+  }
+
+  .col-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    .car-box {
+      width: 45%;
+      margin: 1em;
+
+      background-color: lighten(@secondary_color, 5%);
+      border-radius: 0.8rem;
+      img {
+        height: 200px;
+        width: 100%;
+      }
+      .car-info {
+        color: @third_color;
+        padding: 0.5em 1.5em;
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+        hr {
+          border: 1px solid rgb(95, 95, 95);
+          opacity: 0.4;
+          margin: 0.5rem 0 0.5rem 0;
+        }
+        .tags {
+          margin-top: 0.5rem;
+          overflow: hidden;
+          padding-bottom: 2em;
+
+          span {
+            margin: 0 0.5em;
+            padding: 2em 0em;
+            color: darken(@third_color, 40%);
+          }
+
+          .year,
+          .price {
+            color: @third_color;
+          }
+
+          .year {
+            background-color: @primary_color;
+            padding: 0.5em 1em;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 0.35rem;
+          }
+        }
       }
     }
   }
