@@ -258,3 +258,63 @@ body {
   vertical-align: middle;
   border-radius: 0.35rem;
 }
+.options {
+  padding: 0 10em;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+.options .img-banner {
+  text-align: center;
+}
+.options .row {
+  position: relative;
+  z-index: -1;
+  margin-top: -5em;
+  display: flex;
+  color: white;
+  text-align: center;
+}
+.options .row .sell-car {
+  padding: 10% 10% 5% 10%;
+  background-color: #293748;
+  margin: 0 0.8em;
+}
+.options .row .sell-car:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(45deg);
+  background-color: #000;
+  /* to see where it is */
+  box-shadow: 0 0 0 40px #f2f2f2;
+}
+.options .row .sell-car h3 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+.options .row .sell-car p {
+  width: 100%;
+}
+.options .row .buy-car {
+  padding: 10% 10% 5% 10%;
+  background-color: #d01818;
+  margin: 0 0.8em;
+}
+.options .row .buy-car:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  background-color: #000;
+  /* to see where it is */
+  box-shadow: 0 0 0 40px #f2f2f2;
+}
+.options .row .buy-car h3 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+.options .row .buy-car p {
+  width: 100%;
+}

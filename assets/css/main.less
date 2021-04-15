@@ -250,3 +250,71 @@ body {
     }
   }
 }
+
+.options {
+  padding: 0 10em;
+  margin-top: 15%;
+  margin-bottom: 10%;
+
+  .img-banner {
+    text-align: center;
+  }
+  .row {
+    position: relative;
+    z-index: -1;
+    margin-top: -5em;
+    display: flex;
+    color: @third_color;
+    text-align: center;
+
+    .sell-car {
+      padding: 10% 10% 5% 10%;
+      background-color: lighten(@secondary_color, 2%);
+      margin: 0 0.8em;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: rotate(45deg);
+        background-color: #000; /* to see where it is */
+        box-shadow: 0 0 0 40px darken(@third_color, 5%);
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .buy-car {
+      padding: 10% 10% 5% 10%;
+      background-color: @primary_color;
+      margin: 0 0.8em;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(45deg);
+        background-color: #000; /* to see where it is */
+        box-shadow: 0 0 0 40px darken(@third_color, 5%);
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
