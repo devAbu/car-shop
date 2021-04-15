@@ -318,3 +318,51 @@ body {
     }
   }
 }
+
+.footer {
+  footer {
+    background-color: darken(@third_color, 15%);
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 0px;
+
+    .row {
+      display: flex;
+      padding: 2.5em 5em;
+      .col-4 {
+        width: 33%;
+
+        a {
+          text-decoration: none;
+          margin: 0 0.8em;
+          i {
+            color: lighten(@secondary_color, 20%);
+          }
+        }
+
+        h3 {
+          text-transform: uppercase;
+          color: lighten(@secondary_color, 20%);
+          margin-bottom: 0.8em;
+        }
+
+        ul {
+          li {
+            margin: 0.5em 0;
+            a {
+              color: lighten(@secondary_color, 20%);
+              span {
+                i {
+                  font-size: 12px;
+                  color: lighten(@secondary_color, 20%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
