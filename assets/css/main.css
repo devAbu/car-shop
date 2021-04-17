@@ -373,6 +373,9 @@ body {
   display: flex;
   align-items: stretch;
 }
+.about-container .about-content > * {
+  width: 100%;
+}
 .about-container .about-content .about-text {
   padding-right: 5em;
   font-size: clamp(14px, 16px, 1.5em);
@@ -380,17 +383,14 @@ body {
 }
 .about-container .about-content .about-text .spec {
   margin: 1.2em 0;
-  font-size: clamp(18px, 20px, 1.7em);
+  font-size: clamp(16px, 18px, 1.7em);
   border-left: 5px solid #d01818;
   padding-left: 1em;
   width: 75%;
 }
 .about-container .about-content .about-img {
   height: 100%;
-  width: 100%;
-}
-.about-container .about-content .about-img img {
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 1.25em;
 }
 /* PROM */
 .prom {
@@ -408,7 +408,79 @@ body {
   font-weight: 500;
 }
 .prom div p {
-  font-size: clamp(16px, 20px, 1.5em);
+  font-size: clamp(16px, 18px, 1.5em);
   font-weight: bold;
   margin-top: 1em;
+}
+/* CONTACT */
+.contact-info {
+  margin: 10vh 10vw;
+  display: flex;
+  justify-content: space-around;
+}
+.contact-info > * {
+  width: 100%;
+}
+.contact-info div {
+  background-color: #ced8e3;
+  padding: 1.2em 3em;
+  text-align: center;
+  margin: 0.5em;
+  border-radius: 0.5em;
+}
+.contact-info div:not(.icon) {
+  -webkit-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+}
+.contact-info div.icon {
+  color: #a21313;
+}
+.contact-info div h4 {
+  font-size: clamp(14px, 16px, 1.5em);
+  font-weight: 500;
+}
+.contact-info div p {
+  font-size: clamp(12px, 14px, 1.2em);
+  font-weight: bold;
+  margin-top: 1em;
+  line-height: 30px;
+}
+.contact-info div p a {
+  text-decoration: none;
+  color: black;
+}
+.contact-form {
+  margin: 10vh 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form > * {
+  width: 100%;
+}
+.contact-form iframe {
+  width: 80%;
+  height: 90%;
+}
+.contact-form .form-container h3 {
+  font-size: clamp(16px, 36px, 1.7em);
+}
+.contact-form .form-container h3 span {
+  color: #d01818;
+}
+.contact-form .form-container form input[type="text"],
+.contact-form .form-container form input[type="email"],
+.contact-form .form-container form textarea {
+  width: 80%;
+  margin: 1em;
+  padding: 0.85em;
+  border-radius: 0.35em;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+}
+.contact-form .form-container form textarea {
+  resize: none;
 }
