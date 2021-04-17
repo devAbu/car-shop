@@ -12,9 +12,11 @@
 }
 
 body {
-  background-color: darken(@third_color, 5%);
-  font-family: "Oxygen", sans-serif;
+  background-color: darken(@third_color, 2.5%);
+  font-family: "Ubuntu", sans-serif;
 }
+
+/* NAVBAR */
 
 .navbar {
   padding: 1em 5%;
@@ -58,6 +60,8 @@ body {
   }
 }
 
+/* HERO SECTION */
+
 .hero {
   height: 95vh;
   background-image: url("../images/hero.jpg");
@@ -76,6 +80,8 @@ body {
     color: darken(@primary_color, 10%);
   }
 }
+
+/* Car Search */
 
 .buy-options {
   background-color: @third_color;
@@ -144,11 +150,12 @@ body {
   }
 }
 
+/* FEATURED CARD */
+
 .featured-cars {
   display: flex;
   flex-wrap: wrap;
   padding: 0 3em;
-  font-family: "ubuntu", sans-serif;
 
   .car-1 {
     width: 45%;
@@ -251,6 +258,8 @@ body {
   }
 }
 
+/* Two Options */
+
 .options {
   padding: 0 10em;
   margin-top: 15%;
@@ -279,7 +288,7 @@ body {
         left: 0;
         transform: rotate(45deg);
         background-color: #000; /* to see where it is */
-        box-shadow: 0 0 0 40px darken(@third_color, 5%);
+        box-shadow: 0 0 0 40px darken(@third_color, 2.5%);
       }
 
       h3 {
@@ -318,6 +327,8 @@ body {
     }
   }
 }
+
+/* FOOTER */
 
 .footer {
   footer {
@@ -363,6 +374,69 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+/* ABOUT US */
+
+.about-container {
+  margin: 10vh 5vw;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(22px, 58px, 5em);
+    color: @secondary_color;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: stretch;
+    .about-text {
+      padding-right: 5em;
+      font-size: clamp(14px, 16px, 1.5em);
+      line-height: 27px;
+
+      .spec {
+        margin: 1.2em 0;
+        font-size: clamp(18px, 20px, 1.7em);
+        border-left: 5px solid @primary_color;
+        padding-left: 1em;
+        width: 75%;
+      }
+    }
+
+    .about-img {
+      height: 100%;
+      width: 100%;
+
+      img {
+        border-radius: 20px 20px 20px 20px;
+      }
+    }
+  }
+}
+
+/* PROM */
+
+.prom {
+  margin: 5vh 10vw;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    background-color: lighten(@secondary_color, 65%);
+    padding: 3em 4em;
+    text-align: center;
+
+    h4 {
+      font-size: clamp(14px, 16px, 1.5em);
+      font-weight: 500;
+    }
+    p {
+      font-size: clamp(16px, 20px, 1.5em);
+      font-weight: bold;
+      margin-top: 1em;
     }
   }
 }

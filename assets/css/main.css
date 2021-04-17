@@ -49,9 +49,10 @@
   outline: none;
 }
 body {
-  background-color: #f2f2f2;
-  font-family: "Oxygen", sans-serif;
+  background-color: #f9f9f9;
+  font-family: "Ubuntu", sans-serif;
 }
+/* NAVBAR */
 .navbar {
   padding: 1em 5%;
   position: absolute;
@@ -85,6 +86,7 @@ body {
 .navbar .navbar_left li a.active {
   color: #a21313;
 }
+/* HERO SECTION */
 .hero {
   height: 95vh;
   background-image: url("../images/hero.jpg");
@@ -102,6 +104,7 @@ body {
   top: 20%;
   color: #a21313;
 }
+/* Car Search */
 .buy-options {
   background-color: white;
   margin: -5% 15% 10% 15%;
@@ -162,11 +165,11 @@ body {
   border: 1px solid transparent;
   line-height: 1.5;
 }
+/* FEATURED CARD */
 .featured-cars {
   display: flex;
   flex-wrap: wrap;
   padding: 0 3em;
-  font-family: "ubuntu", sans-serif;
 }
 .featured-cars .car-1 {
   width: 45%;
@@ -258,6 +261,7 @@ body {
   vertical-align: middle;
   border-radius: 0.35rem;
 }
+/* Two Options */
 .options {
   padding: 0 10em;
   margin-top: 15%;
@@ -287,7 +291,7 @@ body {
   transform: rotate(45deg);
   background-color: #000;
   /* to see where it is */
-  box-shadow: 0 0 0 40px #f2f2f2;
+  box-shadow: 0 0 0 40px #f9f9f9;
 }
 .options .row .sell-car h3 {
   font-size: 24px;
@@ -318,6 +322,7 @@ body {
 .options .row .buy-car p {
   width: 100%;
 }
+/* FOOTER */
 .footer footer {
   background-color: #d9d9d9;
   width: 100%;
@@ -354,4 +359,56 @@ body {
 .footer footer .row .col-4 ul li a span i {
   font-size: 12px;
   color: #4a6482;
+}
+/* ABOUT US */
+.about-container {
+  margin: 10vh 5vw;
+}
+.about-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(22px, 58px, 5em);
+  color: #253241;
+}
+.about-container .about-content {
+  display: flex;
+  align-items: stretch;
+}
+.about-container .about-content .about-text {
+  padding-right: 5em;
+  font-size: clamp(14px, 16px, 1.5em);
+  line-height: 27px;
+}
+.about-container .about-content .about-text .spec {
+  margin: 1.2em 0;
+  font-size: clamp(18px, 20px, 1.7em);
+  border-left: 5px solid #d01818;
+  padding-left: 1em;
+  width: 75%;
+}
+.about-container .about-content .about-img {
+  height: 100%;
+  width: 100%;
+}
+.about-container .about-content .about-img img {
+  border-radius: 20px 20px 20px 20px;
+}
+/* PROM */
+.prom {
+  margin: 5vh 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.prom div {
+  background-color: #ced8e3;
+  padding: 3em 4em;
+  text-align: center;
+}
+.prom div h4 {
+  font-size: clamp(14px, 16px, 1.5em);
+  font-weight: 500;
+}
+.prom div p {
+  font-size: clamp(16px, 20px, 1.5em);
+  font-weight: bold;
+  margin-top: 1em;
 }
