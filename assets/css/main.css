@@ -322,6 +322,117 @@ body {
 .options .row .buy-car p {
   width: 100%;
 }
+/* TEAM */
+.team {
+  margin: 5em;
+  border-radius: 0.85rem;
+}
+.team .glider-contain {
+  background-color: #1c2631;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 2em;
+}
+.team .glider-contain .team-text {
+  color: white;
+  width: 50%;
+  margin-top: 2em;
+}
+.team .glider-contain .team-text h2 {
+  font-size: clamp(20px, 2.8em, 4em);
+  margin-bottom: 0.6em;
+}
+.team .glider-contain .team-text ul li {
+  font-size: clamp(14px, 16px, 2em);
+  line-height: 1.5em;
+}
+.team .glider-contain .team-text ul li:before {
+  content: "\f058";
+  font-weight: 900;
+  font-family: "font awesome 5 free";
+  padding-right: 0.7em;
+  font-size: 16px;
+  color: #d01818;
+}
+.team .glider-contain .team-text button {
+  margin: 50px;
+}
+.team .glider-contain .team-text .glider-prev {
+  background-color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0.8em;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.team .glider-contain .team-text .glider-next {
+  background-color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0.8em;
+  position: relative;
+  margin-left: -2.5em;
+  top: 0;
+  left: 0;
+}
+.team .glider-contain .glider .p_content {
+  background: white !important;
+  display: block;
+  margin: 1.5em;
+  border-radius: 0.8em;
+  padding-bottom: 1.2em;
+}
+.team .glider-contain .glider .p_content .box {
+  position: relative;
+  padding: 0 1.2em;
+}
+.team .glider-contain .glider .p_content .box .p_img {
+  border-radius: 0.8em 0.8em 0 0;
+}
+.team .glider-contain .glider .p_content .box .fas {
+  background-color: #d01818;
+  color: white;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  position: absolute;
+  top: -1.6em;
+  left: 0.5em;
+}
+.team .glider-contain .glider .p_content .box .fa-envelope {
+  left: 2em;
+}
+.team .glider-contain .glider .p_content .box .p_name {
+  font-size: clamp(16px, 22px, 1.6em);
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 0.25em;
+}
+.team .glider-contain .glider .p_content .box .p_p {
+  opacity: 0.5;
+  font-size: clamp(12px, 16px, 1.3em);
+  font-weight: 500;
+}
+.team .glider-contain .glider .p_content .box hr {
+  background: #ecf0f3;
+  margin: 0.55em 0;
+  border: 0.5px solid #969696;
+  opacity: 0.4;
+}
+.team .glider-contain .glider .p_content .box .p_email {
+  font-size: clamp(12px, 16px, 1.5em);
+  line-height: 24px;
+  color: red;
+  text-decoration: none;
+}
+.team .glider-contain .glider .p_content .box .p_phone {
+  font-size: clamp(12px, 16px, 1.5em);
+  line-height: 24px;
+  color: gray;
+  text-decoration: none;
+  opacity: 0.8;
+}
 /* FOOTER */
 .footer footer {
   background-color: #d9d9d9;
@@ -483,4 +594,16 @@ body {
 }
 .contact-form .form-container form textarea {
   resize: none;
+}
+/* SHOP */
+.filters {
+  margin: 10vh 0vw;
+  padding: 1em 10vw;
+  background-color: #d9d9d9;
+}
+.filters form {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 2em;
+  justify-content: space-around;
 }

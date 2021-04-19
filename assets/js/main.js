@@ -17,3 +17,12 @@ xhr_footer.onreadystatechange = function () {
 };
 xhr_footer.open("GET", "/templates/footer.html");
 xhr_footer.send();
+
+new Glider(document.querySelector(".glider"), {
+  slidesToShow: 3,
+  draggable: true,
+  arrows: {
+    prev: ".glider-prev",
+    next: ".glider-next",
+  },
+});

@@ -96,6 +96,7 @@ body {
   .row {
     width: 100%;
     display: flex;
+
     .brand-selection {
       margin: 0 1em;
       p {
@@ -328,6 +329,139 @@ body {
   }
 }
 
+/* TEAM */
+.team {
+  margin: 5em;
+  border-radius: 0.85rem;
+  .glider-contain {
+    background-color: darken(@secondary_color, 5%);
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 2em;
+
+    .team-text {
+      color: white;
+      width: 50%;
+      margin-top: 2em;
+
+      h2 {
+        font-size: clamp(20px, 2.8em, 4em);
+        margin-bottom: 0.6em;
+      }
+
+      ul {
+        li {
+          font-size: clamp(14px, 16px, 2em);
+          line-height: 1.5em;
+
+          &:before {
+            content: "\f058";
+            font-weight: 900;
+            font-family: "font awesome 5 free";
+            padding-right: 0.7em;
+            font-size: 16px;
+            color: @primary_color;
+          }
+        }
+      }
+
+      button {
+        margin: 50px;
+      }
+
+      .glider-prev {
+        background-color: @third_color;
+        border-radius: 50%;
+        font-size: 18px;
+        padding: 0.8em;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+
+      .glider-next {
+        background-color: @third_color;
+        border-radius: 50%;
+        font-size: 18px;
+        padding: 0.8em;
+        position: relative;
+        margin-left: -2.5em;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .glider {
+      .p_content {
+        background: white !important;
+        display: block;
+        margin: 1.5em;
+        border-radius: 0.8em;
+        padding-bottom: 1.2em;
+
+        .box {
+          position: relative;
+          padding: 0 1.2em;
+
+          .p_img {
+            border-radius: 0.8em 0.8em 0 0;
+          }
+
+          .fas {
+            background-color: @primary_color;
+            color: @third_color;
+            padding: 0.2em;
+            border-radius: 0.2em;
+            position: absolute;
+            top: -1.6em;
+            left: 0.5em;
+          }
+
+          .fa-envelope {
+            left: 2em;
+          }
+
+          .p_name {
+            font-size: clamp(16px, 22px, 1.6em);
+            font-weight: 700;
+            line-height: 29px;
+            margin-bottom: 0.25em;
+          }
+
+          .p_p {
+            opacity: 0.5;
+            font-size: clamp(12px, 16px, 1.3em);
+            font-weight: 500;
+          }
+
+          hr {
+            background: #ecf0f3;
+            margin: 0.55em 0;
+            border: 0.5px solid rgb(150, 150, 150);
+            opacity: 0.4;
+          }
+
+          .p_email {
+            font-size: clamp(12px, 16px, 1.5em);
+            line-height: 24px;
+            color: red;
+            text-decoration: none;
+          }
+
+          .p_phone {
+            font-size: clamp(12px, 16px, 1.5em);
+            line-height: 24px;
+            color: gray;
+            text-decoration: none;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* FOOTER */
 
 .footer {
@@ -529,5 +663,20 @@ body {
         resize: none;
       }
     }
+  }
+}
+
+/* SHOP */
+
+.filters {
+  margin: 10vh 0vw;
+  padding: 1em 10vw;
+  background-color: darken(@third_color, 15%);
+
+  form {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 2em;
+    justify-content: space-around;
   }
 }
