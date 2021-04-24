@@ -26,9 +26,11 @@ filter_btn.addEventListener("click", () => {
     filter_form.style.maxHeight = null;
     icon.classList.remove("fa-sort-up");
     icon.classList.add("fa-sort-down");
+    filter_form.style.marginTop = "0";
   } else {
     filter_form.style.maxHeight = filter_form.scrollHeight + "px";
     icon.classList.add("fa-sort-up");
     icon.classList.remove("fa-sort-down");
+    filter_form.style.marginTop = "2em";
   }
 });
