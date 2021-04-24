@@ -18,11 +18,17 @@ xhr_footer.onreadystatechange = function () {
 xhr_footer.open("GET", "/templates/footer.html");
 xhr_footer.send();
 
-new Glider(document.querySelector(".glider"), {
-  slidesToShow: 3,
-  draggable: true,
-  arrows: {
-    prev: ".glider-prev",
-    next: ".glider-next",
-  },
+let filter_btn = document.querySelector(".filter-btn");
+filter_btn.addEventListener("click", () => {
+  let filter_form = document.querySelector(".filter-form");
+  let icon = document.querySelector(".filter-btn i");
+  if (filter_form.style.maxHeight) {
+    filter_form.style.maxHeight = null;
+    icon.classList.remove("fa-sort-up");
+    icon.classList.add("fa-sort-down");
+  } else {
+    filter_form.style.maxHeight = filter_form.scrollHeight + "px";
+    icon.classList.add("fa-sort-up");
+    icon.classList.remove("fa-sort-down");
+  }
 });

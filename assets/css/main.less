@@ -76,7 +76,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     left: 25%;
-    top: 20%;
+    top: 15%;
     color: darken(@primary_color, 10%);
   }
 }
@@ -163,6 +163,10 @@ body {
     background-color: lighten(@secondary_color, 5%);
     border-radius: 0.8rem;
     margin: 1em;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+    box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+
     img {
       height: 80%;
       width: 100%;
@@ -210,6 +214,9 @@ body {
     width: 50%;
 
     .car-box {
+      -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+      -moz-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+      box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
       width: 45%;
       margin: 1em;
 
@@ -263,7 +270,7 @@ body {
 
 .options {
   padding: 0 10em;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: 10%;
 
   .img-banner {
@@ -668,15 +675,71 @@ body {
 
 /* SHOP */
 
+/* FILTERS */
+
 .filters {
   margin: 10vh 0vw;
   padding: 1em 10vw;
-  background-color: darken(@third_color, 15%);
+  background-color: darken(@third_color, 5%);
+
+  .filter-btn {
+    margin-left: 0.5em;
+    text-transform: uppercase;
+    color: @third_color;
+    background-color: @secondary_color;
+    padding: 1em 2em;
+    border-radius: 0.25rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+
+    i {
+      float: right;
+      position: absolute;
+      right: 0.5em;
+    }
+
+    .show-form {
+      background-color: red;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24),
+        0 8px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
 
   form {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 2em;
     justify-content: space-around;
+    margin-top: 2em;
+
+    div {
+      width: 100%;
+
+      input,
+      select {
+        border-radius: 0.35em;
+        padding: 1em 0.5em;
+        width: 80%;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        width: 40%;
+        display: inline-block;
+      }
+    }
   }
 }

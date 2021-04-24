@@ -17,9 +17,11 @@
     <div class="navbar-include"></div>
 
     <section class="filters">
-      <form>
+      <button class="btn filter-btn">
+        Filter <i class="fas fa-sort-down"></i>
+      </button>
+      <form class="filter-form">
         <div class="brand-select">
-          <span>Brand:</span>
           <select>
             <option>Audi</option>
             <option>BMW</option>
@@ -30,7 +32,6 @@
         </div>
 
         <div class="model-select">
-          <span>Model:</span>
           <select>
             <option>A4</option>
             <option>A7</option>
@@ -39,14 +40,7 @@
           </select>
         </div>
 
-        <div class="price-select">
-          <span>Price:</span>
-          <input type="number" placeholder="Min Price" />
-          <input type="number" placeholder="Max Price" />
-        </div>
-
         <div class="mileage-select">
-          <span>Mileage:</span>
           <select>
             <option>< 10,000 miles</option>
             <option>< 50,000 miles</option>
@@ -57,7 +51,6 @@
         </div>
 
         <div class="drive_type-select">
-          <span>Drive Type:</span>
           <select>
             <option>AWD / 4WD</option>
             <option>Front Wheel Drive</option>
@@ -66,7 +59,6 @@
         </div>
 
         <div class="feul_type-select">
-          <span>Fuel Type:</span>
           <select>
             <option>Diesel</option>
             <option>Electric</option>
@@ -76,7 +68,6 @@
         </div>
 
         <div class="transmission">
-          <span>Transmission:</span>
           <select>
             <option>Automatic</option>
             <option>Manual</option>
@@ -85,7 +76,6 @@
         </div>
 
         <div class="doors-select">
-          <span>Doors:</span>
           <select>
             <option>2-Door</option>
             <option>3-Door</option>
@@ -95,7 +85,6 @@
         </div>
 
         <div class="cylinders-select">
-          <span>Cylinders:</span>
           <select>
             <option>4</option>
             <option>6</option>
@@ -103,8 +92,12 @@
           </select>
         </div>
 
+        <div class="price-select">
+          <input type="number" placeholder="Min Price" />
+          <input type="number" placeholder="Max Price" />
+        </div>
+
         <div class="year-select">
-          <span>Year:</span>
           <input type="number" placeholder="Min Year" />
           <input type="number" placeholder="Max Year" />
         </div>
@@ -114,5 +107,9 @@
     <div class="footer-include"></div>
 
     <script src="./assets/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4dd2b4255f.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
