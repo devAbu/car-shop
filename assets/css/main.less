@@ -92,6 +92,76 @@ body {
   -webkit-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
   -moz-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
   box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+select {
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+  font-size: 1.5rem;
+  padding: 1em 5em 1em 1.5em;
+  background: #4d5061;
+  color: white;
+  border: 0; 
+}
+
+.brand-selection{
+  position: relative;
+  margin: 0 1em;
+
+}
+
+.custom-arrow{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: #3b3c47;
+  height: 100%;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.custom-arrow::before, .custom-arrow::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-arrow::before {
+  border-left: 0.65em solid transparent;
+  border-right: 0.65em solid transparent;
+  border-bottom:  0.65em solid rgba(255,255,255,.5);
+
+  top: 40%;
+}
+
+.custom-arrow::after {
+  border-left: 0.65em solid transparent;
+  border-right: 0.65em solid transparent;
+  border-top:  0.65em solid rgba(255,255,255,.5);
+
+  top: 60%;
+}
+
+.juhu{
+  position: relative;
+}
+/* 
+.buy-options {
+  background-color: @third_color;
+  margin: -5% 15% 10% 15%;
+  padding: 3em 5em;
+  border-radius: 0.3rem;
+  display: flex;
+  -webkit-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+  -moz-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
+  box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
 
   .row {
     width: 100%;
@@ -150,7 +220,7 @@ body {
     }
   }
 }
-
+ */
 /* FEATURED CARD */
 
 .featured-cars {
@@ -310,6 +380,7 @@ body {
     }
 
     .buy-car {
+      position: relative;
       padding: 10% 10% 5% 10%;
       background-color: @primary_color;
       margin: 0 0.8em;
@@ -321,7 +392,7 @@ body {
         right: 0;
         transform: rotate(45deg);
         background-color: #000; /* to see where it is */
-        box-shadow: 0 0 0 40px darken(@third_color, 5%);
+        box-shadow: 0 0 0 40px darken(@third_color, 2.5%);
       }
 
       h3 {
@@ -380,22 +451,44 @@ body {
       .glider-prev {
         background-color: @third_color;
         border-radius: 50%;
-        font-size: 18px;
+        font-size: 20px;
         padding: 0.8em;
         position: relative;
         top: 0;
         right: 0;
+
+        &::before{
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f053";
+          font-size: 1.5em;
+        }
       }
 
       .glider-next {
         background-color: @third_color;
         border-radius: 50%;
-        font-size: 18px;
+        font-size: 20px;
         padding: 0.8em;
         position: relative;
         margin-left: -2.5em;
         top: 0;
         left: 0;
+        
+        &::before{
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f054";
+          font-size: 1.5em;
+        }
+
+      
       }
     }
 
