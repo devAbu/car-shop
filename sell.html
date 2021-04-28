@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell your car</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar-include"></div>
+
+    <section class="submit-car">
+      <h2>Submit your car</h2>
+
+      <p>Car Details</p>
+      <div class="details">
+        <div>
+          <label for="car-brand">Brand</label>
+          <input
+            list="brands"
+            name="car-brand"
+            id="car-brand"
+            placeholder="Brand"
+          />
+          <datalist id="brands">
+            <option value="Audi"></option>
+            <option value="BMW"></option>
+            <option value="Bentley"></option>
+            <option value="Mercedes"></option>
+            <option value="Alfa Romeo"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-model">Model</label>
+          <input
+            list="models"
+            name="car-model"
+            id="car-model"
+            placeholder="Model"
+          />
+          <datalist id="models">
+            <option value="Model 1"></option>
+            <option value="Model 2"></option>
+            <option value="Model 3"></option>
+            <option value="Model 4"></option>
+            <option value="Model 5"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-reg">First registration</label>
+          <input
+            list="regs"
+            name="car-reg"
+            id="car-reg"
+            placeholder="First registration"
+          />
+          <datalist id="regs">
+            <option value="2021"></option>
+            <option value="2020"></option>
+            <option value="2019"></option>
+            <option value="2018"></option>
+            <option value="2017"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-design">Design</label>
+          <input
+            list="designs"
+            name="car-design"
+            id="car-design"
+            placeholder="Design"
+          />
+          <datalist id="designs">
+            <option value="Design 1"></option>
+            <option value="Design 2"></option>
+            <option value="Design 3"></option>
+            <option value="Design 4"></option>
+            <option value="Design 5"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-variant">Model variant</label>
+          <input
+            list="variants"
+            name="car-variant"
+            id="car-variant"
+            placeholder="Brand"
+            Model
+            Variant
+          />
+          <datalist id="variants">
+            <option value="Variant 1"></option>
+            <option value="Variant 2"></option>
+            <option value="Variant 3"></option>
+            <option value="Variant 5"></option>
+            <option value="Variant 4"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-type">Type</label>
+          <input
+            list="types"
+            name="car-type"
+            id="car-type"
+            placeholder="Type"
+          />
+          <datalist id="types">
+            <option value="Type 1"></option>
+            <option value="Type 2"></option>
+            <option value="Type 3"></option>
+            <option value="Type 5"></option>
+            <option value="Type 4"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-kilom">Kilometre</label>
+          <input
+            list="kiloms"
+            name="car-kilom"
+            id="car-kilom"
+            placeholder="Kilometre"
+          />
+          <datalist id="kiloms">
+            <option value="< 5000"></option>
+            <option value="< 10000"></option>
+            <option value="< 25000"></option>
+            <option value="< 50000"></option>
+            <option value="< 100000"></option>
+            <option value="< 150000"></option>
+            <option value="< 200000"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-sell-plan">When do you plan to sell?</label>
+          <input
+            list="plans"
+            name="car-sell-plan"
+            id="car-sell-plan"
+            placeholder="When do you plan to sell?"
+          />
+          <datalist id="plans">
+            <option value="As soon as possible"></option>
+            <option value="In the next 4 weeks"></option>
+            <option value="In the next 3 months"></option>
+            <option value="I don't have a plan"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-sale">Which sale do you prefer?</label>
+          <input
+            list="sales"
+            name="car-sale"
+            id="car-sale"
+            placeholder="Which sale do you prefer?"
+          />
+          <datalist id="sales">
+            <option value="In private"></option>
+            <option value="To dealers"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="car-images" class="car-image-label"
+            ><i class="fas fa-upload"></i> Car Images</label
+          >
+          <input type="file" id="car-images" name="car-images" multiple />
+        </div>
+
+        <div>
+          <label for="email">E-mail address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email address..."
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-include"></div>
+
+    <script src="./assets/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4dd2b4255f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

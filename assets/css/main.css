@@ -143,7 +143,7 @@ select {
 }
 .custom-arrow::before,
 .custom-arrow::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -803,4 +803,31 @@ select {
   display: inline-block;
   vertical-align: middle;
   border-radius: 0.35rem;
+}
+/* SELL CAR */
+.submit-car {
+  margin: 10vh 0vw;
+  padding: 1em 10vw;
+  background-color: #f2f2f2;
+}
+.submit-car p {
+  margin-top: 1.5em;
+}
+.submit-car .details {
+  margin-top: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+.submit-car .details input[type="file"] {
+  display: none;
+}
+.submit-car .details .car-image-label {
+  color: white;
+  background-color: #f5af09;
+  font-size: 20px;
+  cursor: pointer;
+  width: 150px;
+  display: block;
+  padding: 1em 1.5em;
 }
