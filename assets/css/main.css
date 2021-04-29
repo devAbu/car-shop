@@ -760,6 +760,9 @@ select {
   padding: 0 2em;
   padding-bottom: 2em;
 }
+.shop-content a {
+  text-decoration: none;
+}
 .shop-content .car-box {
   -webkit-box-shadow: 3px 3px 5px 0px #2e3e51;
   -moz-box-shadow: 3px 3px 5px 0px #2e3e51;
@@ -830,4 +833,87 @@ select {
   width: 150px;
   display: block;
   padding: 1em 1.5em;
+}
+/* SINGLE PAGE */
+/* SIDEBAR */
+.car-details {
+  margin: 10vh 0vw;
+  padding: 1em 10vw;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+.car-details .car-images-carousel {
+  position: relative;
+  /* Add a pointer when hovering over the thumbnail images */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Six columns side by side */
+  /* Add a transparency effect for thumnbail images */
+}
+.car-details .car-images-carousel .mySlides {
+  display: none;
+  /* Number text (1/3 etc) */
+}
+.car-details .car-images-carousel .mySlides img {
+  border-radius: 10px;
+  height: 450px;
+}
+.car-details .car-images-carousel .mySlides .numbertext {
+  color: red;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.car-details .car-images-carousel .cursor {
+  cursor: pointer;
+}
+.car-details .car-images-carousel .prev,
+.car-details .car-images-carousel .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.car-details .car-images-carousel .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.car-details .car-images-carousel .prev:hover,
+.car-details .car-images-carousel .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.car-details .car-images-carousel .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.car-details .car-images-carousel .column {
+  float: left;
+  width: 16.66%;
+}
+.car-details .car-images-carousel .demo {
+  opacity: 0.6;
+  height: 60px;
+}
+.car-details .car-images-carousel .active,
+.car-details .car-images-carousel .demo:hover {
+  opacity: 1;
+}
+.car-details .car-description #more {
+  display: none;
+}
+.car-details .car-main-detail {
+  float: right;
 }

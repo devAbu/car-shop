@@ -848,6 +848,10 @@ select {
   padding: 0 2em;
   padding-bottom: 2em;
 
+  a {
+    text-decoration: none;
+  }
+
   .car-box {
     -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
     -moz-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
@@ -928,5 +932,107 @@ select {
       display: block;
       padding: 1em 1.5em;
     }
+  }
+}
+
+/* SINGLE PAGE */
+
+/* SIDEBAR */
+
+.car-details {
+  margin: 10vh 0vw;
+  padding: 1em 10vw;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+
+  .car-images-carousel {
+    position: relative;
+
+    .mySlides {
+      display: none;
+
+      img {
+        border-radius: 10px;
+        height: 450px;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: red;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Six columns side by side */
+    .column {
+      float: left;
+      width: 16.66%;
+    }
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+      height: 60px;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+  }
+
+  .car-description {
+    #more {
+      display: none;
+    }
+  }
+
+  .car-main-detail {
+    float: right;
   }
 }
