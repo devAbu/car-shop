@@ -21,23 +21,32 @@
 
       <p>Car Details</p>
       <div class="details">
-        <div>
-          <label for="car-brand">Brand</label>
+        
+
+        <div class="forma">
           <input
+          type="text"
+          autocomplete="off"
             list="brands"
             name="car-brand"
             id="car-brand"
-            placeholder="Brand"
+            required
+
           />
+
+          <label for="car-brand" class="label-name">
+            <span class="content-name">Brand</span>
+          </label>
+<!-- 
           <datalist id="brands">
             <option value="Audi"></option>
             <option value="BMW"></option>
             <option value="Bentley"></option>
             <option value="Mercedes"></option>
             <option value="Alfa Romeo"></option>
-          </datalist>
+          </datalist> -->
         </div>
-
+       
         <div>
           <label for="car-model">Model</label>
           <input
