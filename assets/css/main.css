@@ -838,10 +838,10 @@ select {
 /* SIDEBAR */
 .car-details {
   margin: 10vh 0vw;
-  padding: 1em 10vw;
+  padding: 1em 5vw;
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 60% 40%;
   gap: 2em;
 }
 .car-details .car-images-carousel {
@@ -850,6 +850,11 @@ select {
   /* Next & previous buttons */
   /* Position the "next button" to the right */
   /* On hover, add a black background color with a little bit see-through */
+  /* .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    } */
   /* Six columns side by side */
   /* Add a transparency effect for thumnbail images */
 }
@@ -894,28 +899,113 @@ select {
 .car-details .car-images-carousel .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.car-details .car-images-carousel .row:after {
-  content: "";
-  display: table;
-  clear: both;
+.car-details .car-images-carousel .row {
+  margin: 1em 0em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5em;
 }
 .car-details .car-images-carousel .column {
   float: left;
-  width: 16.66%;
+  width: 100%;
+}
+.car-details .car-images-carousel .column img {
+  border-radius: 0.35em;
 }
 .car-details .car-images-carousel .demo {
   opacity: 0.6;
-  height: 60px;
+  height: 125px;
 }
 .car-details .car-images-carousel .active,
 .car-details .car-images-carousel .demo:hover {
   opacity: 1;
 }
-.car-details .car-description #more {
+.car-details .car-description {
+  margin-top: 2.5em;
+}
+.car-details .car-description h3 {
+  font-size: clamp(20px, 1.8em, 2.8em);
+  margin-bottom: 1em;
+}
+.car-details .car-description p {
+  line-height: 1.5em;
+  word-spacing: 0.3em;
+  color: #4d4d4d;
+}
+.car-details .car-description p#more {
   display: none;
 }
+.car-details .car-description button {
+  padding: 1em 1.2em;
+  background-color: #d01818;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 0.35em;
+  cursor: pointer;
+}
+.car-details .car-features {
+  margin-top: 2em;
+}
+.car-details .car-features h3 {
+  font-size: clamp(20px, 1.8em, 2.8em);
+  margin-bottom: 0.7em;
+}
+.car-details .car-features .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.car-details .car-features .features div {
+  margin: 0.8em 0;
+}
+.car-details .car-features .features div i {
+  margin: 0 0.25em;
+  font-size: 10px;
+  color: #d01818;
+}
 .car-details .car-main-detail {
-  float: right;
+  position: absolute;
+  right: 5vw;
+}
+.car-details .car-main-detail .title h1 {
+  color: #253241;
+  font-weight: 400;
+  padding-bottom: 0.8em;
+}
+.car-details .car-main-detail .car-data span {
+  font-size: clamp(16px, 18px, 1.7em);
+  color: #666666;
+  opacity: 0.7;
+}
+.car-details .car-main-detail .car-data span i {
+  margin: 0 0.25em;
+  font-size: 9px;
+  color: #d01818;
+  vertical-align: middle;
+}
+.car-details .car-main-detail hr {
+  margin: 0.5em 0;
+  border: 1px solid #b3b3b3;
+  opacity: 0.7;
+}
+.car-details .car-main-detail .price {
+  color: #d01818;
+  font-size: clamp(24px, 2.2em, 3em);
+  font-weight: 900;
+}
+.car-details .car-main-detail .details {
+  margin-top: 1em;
+  border-radius: 0.85em;
+  background-color: #dee5ec;
+  padding: 1.5em 2.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.car-details .car-main-detail .details div {
+  margin: 0.5em 0;
+}
+.car-details .car-main-detail .details div .detail-name {
+  font-weight: 600;
 }
 /* MOJE JUHU */
 .forma {

@@ -941,10 +941,10 @@ select {
 
 .car-details {
   margin: 10vh 0vw;
-  padding: 1em 10vw;
+  padding: 1em 5vw;
   overflow-x: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 60% 40%;
   gap: 2em;
 
   .car-images-carousel {
@@ -1002,22 +1002,33 @@ select {
       background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .row:after {
+    .row {
+      margin: 1em 0em;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.5em;
+    }
+
+    /* .row:after {
       content: "";
       display: table;
       clear: both;
-    }
+    } */
 
     /* Six columns side by side */
     .column {
       float: left;
-      width: 16.66%;
+      width: 100%;
+
+      img {
+        border-radius: 0.35em;
+      }
     }
 
     /* Add a transparency effect for thumnbail images */
     .demo {
       opacity: 0.6;
-      height: 60px;
+      height: 125px;
     }
 
     .active,
@@ -1027,13 +1038,109 @@ select {
   }
 
   .car-description {
-    #more {
-      display: none;
+    margin-top: 2.5em;
+    h3 {
+      font-size: clamp(20px; 1.8em, 2.8em);
+      margin-bottom: 1em;
+    }
+    p {
+      line-height: 1.5em;
+      word-spacing: 0.3em;
+      color: darken(@third_color, 70%);
+
+      &#more {
+        display: none;
+      }
+    }
+
+    button {
+      padding: 1em 1.2em;
+      background-color: @primary_color;
+      color: @third_color;
+      outline: none;
+      border: none;
+      border-radius: 0.35em;
+      cursor: pointer;
+    }
+  }
+
+  .car-features {
+    margin-top: 2em;
+
+    h3 {
+      font-size: clamp(20px; 1.8em, 2.8em);
+      margin-bottom: 0.7em;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      div {
+        margin: 0.8em 0;
+        i {
+          margin: 0 0.25em;
+          font-size: 10px;
+          color: @primary_color;
+        }
+      }
     }
   }
 
   .car-main-detail {
-    float: right;
+    position: absolute;
+    right: 5vw;
+
+    .title {
+      h1 {
+        color: @secondary_color;
+        font-weight: 400;
+        padding-bottom: 0.8em;
+      }
+    }
+
+    .car-data {
+      span {
+        font-size: clamp(16px, 18px, 1.7em);
+        color: darken(@third_color, 60%);
+        opacity: 0.7;
+        i {
+          margin: 0 0.25em;
+          font-size: 9px;
+          color: @primary_color;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    hr {
+      margin: 0.5em 0;
+      border: 1px solid darken(@third_color, 30%);
+      opacity: 0.7;
+    }
+
+    .price {
+      color: @primary_color;
+      font-size: clamp(24px; 2.2em, 3em);
+      font-weight: 900;
+    }
+
+    .details {
+      margin-top: 1em;
+      border-radius: 0.85em;
+      background-color: lighten(@secondary_color, 70%);
+      padding: 1.5em 2.5em;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      div {
+        margin: 0.5em 0;
+
+        .detail-name {
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
 
@@ -1055,7 +1162,7 @@ select {
   outline: none;
 }
 
-.forma label{
+.forma label {
   position: absolute;
   bottom: 0px;
   left: 0%;
@@ -1065,7 +1172,7 @@ select {
   border-bottom: 1px solid black;
 }
 
-.forma label::after{
+.forma label::after {
   content: "";
   position: absolute;
   left: 0px;
@@ -1077,7 +1184,7 @@ select {
   transition: transform all 0.3s ease;
 }
 
-.content-name{
+.content-name {
   position: absolute;
   bottom: 5px;
   left: 0px;
@@ -1085,8 +1192,7 @@ select {
 }
 
 .forma input:focus + .label-name .content-name,
-.forma input:valid + .label-name .content-name
-{
+.forma input:valid + .label-name .content-name {
   transform: translateY(-150%);
   font-size: 14px;
   color: #5fa8d3;
