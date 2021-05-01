@@ -156,31 +156,41 @@ body {
 }
 .row {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2em;
 }
 .row .brand-selection {
   position: relative;
-  margin: 0 1em;
+}
+.row .brand-selection p {
+  margin-bottom: 0.5em;
+  color: #253241;
+  font-size: clamp(16px, 20px, 2em);
+}
+.row .brand-selection p span {
+  color: #d01818;
 }
 .row .brand-selection .select-custom {
   position: relative;
 }
 .row .brand-selection .select-custom select {
   box-shadow: 0 10px 25px #000000;
-  font-size: 1.5rem;
-  padding: 1em 5em 1em 1.5em;
-  background: #4d5061;
+  font-size: 1.1rem;
+  padding: 0.6em 2.2em 0.6em 0.6em;
+  background: #2e3e51;
   color: white;
   border: 0;
+  width: 100%;
 }
 .row .brand-selection .select-custom .custom-arrow {
   position: absolute;
   top: 0;
   right: 0;
   display: block;
-  background: #3b3c47;
+  background: #384b62;
   height: 100%;
-  width: 4rem;
+  width: 3rem;
   pointer-events: none;
 }
 .row .brand-selection .select-custom .custom-arrow::before,
@@ -193,16 +203,27 @@ body {
   transform: translate(-50%, -50%);
 }
 .row .brand-selection .select-custom .custom-arrow::before {
-  border-left: 0.65em solid transparent;
-  border-right: 0.65em solid transparent;
-  border-bottom: 0.65em solid rgba(255, 255, 255, 0.5);
+  border-left: 0.45em solid transparent;
+  border-right: 0.45em solid transparent;
+  border-bottom: 0.45em solid white;
   top: 40%;
 }
 .row .brand-selection .select-custom .custom-arrow::after {
-  border-left: 0.65em solid transparent;
-  border-right: 0.65em solid transparent;
-  border-top: 0.65em solid rgba(255, 255, 255, 0.5);
+  border-left: 0.45em solid transparent;
+  border-right: 0.45em solid transparent;
+  border-top: 0.45em solid white;
   top: 60%;
+}
+.row .brand-selection button {
+  border: none;
+  outline: none;
+  background-color: #2e3e51;
+  color: white;
+  padding: 0.6em 2.5em;
+  border-radius: 0.85em;
+  position: absolute;
+  bottom: 0;
+  font-size: clamp(14px, 18px, 1.8em);
 }
 /* FEATURED CARD */
 .featured-cars {
