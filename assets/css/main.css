@@ -327,7 +327,6 @@ body {
   padding: 10% 10% 5% 10%;
   background-color: #293748;
   margin: 0 0.8em;
-  box-shadow: rgb(255 255 255 / 50%) 0px 30px 60px -12px inset, rgb(253 255 255 / 30%) 0px 18px 36px -18px inset;
 }
 .options .row .sell-car:after {
   content: "";
@@ -351,7 +350,6 @@ body {
   padding: 10% 10% 5% 10%;
   background-color: #d01818;
   margin: 0 0.8em;
-  box-shadow: rgb(0 0 0 / 50%) 0px 30px 60px -12px inset, rgb(0 0 0 / 30%) 0px 18px 36px -18px inset;
 }
 .options .row .buy-car:after {
   content: "";
@@ -392,7 +390,7 @@ body {
   margin-bottom: 0.6em;
 }
 .team .glider-contain .team-text ul li {
-  font-size: clamp(14px, 16px, 2em);
+  font-size: clamp(14px, 18px, 2em);
   line-height: 1.5em;
 }
 .team .glider-contain .team-text ul li:before {
