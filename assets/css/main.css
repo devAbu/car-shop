@@ -86,6 +86,45 @@ body {
 .navbar .navbar_left li a.active {
   color: #a21313;
 }
+/* FOOTER */
+.footer footer {
+  background-color: #d9d9d9;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  bottom: 0px;
+}
+.footer footer .row {
+  display: flex;
+  padding: 2.5em 5em;
+}
+.footer footer .row .col-4 {
+  width: 33%;
+}
+.footer footer .row .col-4 .social-media-icons a {
+  text-decoration: none;
+  margin: 0 0.8em;
+}
+.footer footer .row .col-4 .social-media-icons a i {
+  color: #4a6482;
+}
+.footer footer .row .col-4 h3 {
+  text-transform: uppercase;
+  color: #4a6482;
+  margin-bottom: 0.8em;
+}
+.footer footer .row .col-4 ul li {
+  margin: 0.5em 0;
+}
+.footer footer .row .col-4 ul li a {
+  color: #4a6482;
+  text-decoration: none;
+}
+.footer footer .row .col-4 ul li a span i {
+  font-size: 12px;
+  color: #4a6482;
+}
 /* HERO SECTION */
 .hero {
   height: 95vh;
@@ -119,7 +158,14 @@ body {
   width: 100%;
   display: flex;
 }
-select {
+.row .brand-selection {
+  position: relative;
+  margin: 0 1em;
+}
+.row .brand-selection .select-custom {
+  position: relative;
+}
+.row .brand-selection .select-custom select {
   box-shadow: 0 10px 25px #000000;
   font-size: 1.5rem;
   padding: 1em 5em 1em 1.5em;
@@ -127,11 +173,7 @@ select {
   color: white;
   border: 0;
 }
-.brand-selection {
-  position: relative;
-  margin: 0 1em;
-}
-.custom-arrow {
+.row .brand-selection .select-custom .custom-arrow {
   position: absolute;
   top: 0;
   right: 0;
@@ -141,8 +183,8 @@ select {
   width: 4rem;
   pointer-events: none;
 }
-.custom-arrow::before,
-.custom-arrow::after {
+.row .brand-selection .select-custom .custom-arrow::before,
+.row .brand-selection .select-custom .custom-arrow::after {
   content: "";
   position: absolute;
   width: 0;
@@ -150,90 +192,18 @@ select {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.custom-arrow::before {
+.row .brand-selection .select-custom .custom-arrow::before {
   border-left: 0.65em solid transparent;
   border-right: 0.65em solid transparent;
   border-bottom: 0.65em solid rgba(255, 255, 255, 0.5);
   top: 40%;
 }
-.custom-arrow::after {
+.row .brand-selection .select-custom .custom-arrow::after {
   border-left: 0.65em solid transparent;
   border-right: 0.65em solid transparent;
   border-top: 0.65em solid rgba(255, 255, 255, 0.5);
   top: 60%;
 }
-.juhu {
-  position: relative;
-}
-/* 
-.buy-options {
-  background-color: @third_color;
-  margin: -5% 15% 10% 15%;
-  padding: 3em 5em;
-  border-radius: 0.3rem;
-  display: flex;
-  -webkit-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-  -moz-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-  box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-
-  .row {
-    width: 100%;
-    display: flex;
-
-    .brand-selection {
-      margin: 0 1em;
-      p {
-        color: @secondary_color;
-        font-size: clamp(14px, 22px, 2em);
-
-        span {
-          color: lighten(@secondary_color, 40%);
-        }
-      }
-
-      select {
-        padding: 0.8em;
-        color: @secondary_color;
-        border-radius: 0.3rem;
-        background-color: darken(@third_color, 5%);
-        line-height: 1.5;
-        font-size: 18px;
-        cursor: pointer;
-        padding-right: 1.75rem;
-        vertical-align: middle;
-
-        &:hover {
-          -webkit-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          -moz-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          background-color: @third_color;
-        }
-
-        &:focus {
-          border-color: lighten(@primary_color, 20%);
-          outline: 0;
-        }
-
-        option {
-          text-transform: uppercase;
-        }
-      }
-      .btn-primary {
-        margin-left: 0.5em;
-        text-transform: uppercase;
-        color: @third_color;
-        background-color: @primary_color;
-        padding: 1em 2em;
-        border-radius: 0.25rem;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid transparent;
-        line-height: 1.5;
-      }
-    }
-  }
-}
- */
 /* FEATURED CARD */
 .featured-cars {
   display: flex;
@@ -531,44 +501,6 @@ select {
   text-decoration: none;
   opacity: 0.8;
 }
-/* FOOTER */
-.footer footer {
-  background-color: #d9d9d9;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  bottom: 0px;
-}
-.footer footer .row {
-  display: flex;
-  padding: 2.5em 5em;
-}
-.footer footer .row .col-4 {
-  width: 33%;
-}
-.footer footer .row .col-4 a {
-  text-decoration: none;
-  margin: 0 0.8em;
-}
-.footer footer .row .col-4 a i {
-  color: #4a6482;
-}
-.footer footer .row .col-4 h3 {
-  text-transform: uppercase;
-  color: #4a6482;
-  margin-bottom: 0.8em;
-}
-.footer footer .row .col-4 ul li {
-  margin: 0.5em 0;
-}
-.footer footer .row .col-4 ul li a {
-  color: #4a6482;
-}
-.footer footer .row .col-4 ul li a span i {
-  font-size: 12px;
-  color: #4a6482;
-}
 /* ABOUT US */
 .about-container {
   margin: 10vh 5vw;
@@ -659,6 +591,7 @@ select {
   text-decoration: none;
   color: black;
 }
+/* CONTACT FORM */
 .contact-form {
   margin: 10vh 10vw;
   display: flex;
@@ -834,8 +767,57 @@ select {
   display: block;
   padding: 1em 1.5em;
 }
+.submit-car .details .sell-form {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+.submit-car .details .sell-form input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.submit-car .details .sell-form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.submit-car .details .sell-form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform all 0.3s ease;
+}
+.submit-car .details .sell-form label .content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.submit-car .details .sell-form input:focus + .label-name .content-name,
+.submit-car .details .sell-form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+.submit-car .details .sell-form input:focus + .label-name::after,
+.submit-car .details .sell-form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
 /* SINGLE PAGE */
-/* SIDEBAR */
 .car-details {
   margin: 10vh 0vw;
   padding: 1em 5vw;
@@ -843,20 +825,13 @@ select {
   display: grid;
   grid-template-columns: 60% 40%;
   gap: 2em;
+  /* SIDEBAR */
 }
 .car-details .car-images-carousel {
   position: relative;
   /* Add a pointer when hovering over the thumbnail images */
   /* Next & previous buttons */
   /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    } */
-  /* Six columns side by side */
-  /* Add a transparency effect for thumnbail images */
 }
 .car-details .car-images-carousel .mySlides {
   display: none;
@@ -890,34 +865,39 @@ select {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  /* On hover, add a black background color with a little bit see-through */
+}
+.car-details .car-images-carousel .prev:hover,
+.car-details .car-images-carousel .next:hover,
+.car-details .car-images-carousel .prev:hover,
+.car-details .car-images-carousel .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .car-details .car-images-carousel .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-}
-.car-details .car-images-carousel .prev:hover,
-.car-details .car-images-carousel .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .car-details .car-images-carousel .row {
   margin: 1em 0em;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5em;
+  /* Six columns side by side */
+  /* Add a transparency effect for thumnbail images */
 }
-.car-details .car-images-carousel .column {
+.car-details .car-images-carousel .row .column {
   float: left;
   width: 100%;
 }
-.car-details .car-images-carousel .column img {
+.car-details .car-images-carousel .row .column img {
   border-radius: 0.35em;
 }
-.car-details .car-images-carousel .demo {
+.car-details .car-images-carousel .row .demo {
   opacity: 0.6;
   height: 125px;
 }
-.car-details .car-images-carousel .active,
-.car-details .car-images-carousel .demo:hover {
+.car-details .car-images-carousel .row .active,
+.car-details .car-images-carousel .row .demo:hover {
   opacity: 1;
 }
 .car-details .car-description {
@@ -1006,55 +986,4 @@ select {
 }
 .car-details .car-main-detail .details div .detail-name {
   font-weight: 600;
-}
-/* MOJE JUHU */
-.forma {
-  width: 50%;
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-}
-.forma input {
-  width: 100%;
-  height: 100%;
-  color: #595f6e;
-  padding-top: 20px;
-  border: none;
-  outline: none;
-}
-.forma label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid black;
-}
-.forma label::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  height: 100%;
-  width: 100%;
-  border-bottom: 3px solid #5fa8d3;
-  transform: translateX(-100%);
-  transition: transform all 0.3s ease;
-}
-.content-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  transition: all 0.3s ease;
-}
-.forma input:focus + .label-name .content-name,
-.forma input:valid + .label-name .content-name {
-  transform: translateY(-150%);
-  font-size: 14px;
-  color: #5fa8d3;
-}
-.forma input:focus + .label-name::after,
-.forma input:valid + .label-name::after {
-  transform: translateX(0%);
 }

@@ -60,6 +60,60 @@ body {
   }
 }
 
+/* FOOTER */
+
+.footer {
+  footer {
+    background-color: darken(@third_color, 15%);
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 0px;
+
+    .row {
+      display: flex;
+      padding: 2.5em 5em;
+
+      .col-4 {
+        width: 33%;
+
+        .social-media-icons {
+          a {
+            text-decoration: none;
+            margin: 0 0.8em;
+            i {
+              color: lighten(@secondary_color, 20%);
+            }
+          }
+        }
+
+        h3 {
+          text-transform: uppercase;
+          color: lighten(@secondary_color, 20%);
+          margin-bottom: 0.8em;
+        }
+
+        ul {
+          li {
+            margin: 0.5em 0;
+            a {
+              color: lighten(@secondary_color, 20%);
+              text-decoration: none;
+              span {
+                i {
+                  font-size: 12px;
+                  color: lighten(@secondary_color, 20%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* HERO SECTION */
 
 .hero {
@@ -97,130 +151,61 @@ body {
 .row {
   width: 100%;
   display: flex;
-}
-select {
-  box-shadow: 0 10px 25px rgb(0, 0, 0);
-  font-size: 1.5rem;
-  padding: 1em 5em 1em 1.5em;
-  background: #4d5061;
-  color: white;
-  border: 0;
-}
 
-.brand-selection {
-  position: relative;
-  margin: 0 1em;
-}
+  .brand-selection {
+    position: relative;
+    margin: 0 1em;
 
-.custom-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  background: #3b3c47;
-  height: 100%;
-  width: 4rem;
-  pointer-events: none;
-}
-
-.custom-arrow::before,
-.custom-arrow::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.custom-arrow::before {
-  border-left: 0.65em solid transparent;
-  border-right: 0.65em solid transparent;
-  border-bottom: 0.65em solid rgba(255, 255, 255, 0.5);
-
-  top: 40%;
-}
-
-.custom-arrow::after {
-  border-left: 0.65em solid transparent;
-  border-right: 0.65em solid transparent;
-  border-top: 0.65em solid rgba(255, 255, 255, 0.5);
-
-  top: 60%;
-}
-
-.juhu {
-  position: relative;
-}
-/* 
-.buy-options {
-  background-color: @third_color;
-  margin: -5% 15% 10% 15%;
-  padding: 3em 5em;
-  border-radius: 0.3rem;
-  display: flex;
-  -webkit-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-  -moz-box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-  box-shadow: 2px 5px 10px 0px rgba(63, 63, 63, 0.75);
-
-  .row {
-    width: 100%;
-    display: flex;
-
-    .brand-selection {
-      margin: 0 1em;
-      p {
-        color: @secondary_color;
-        font-size: clamp(14px, 22px, 2em);
-
-        span {
-          color: lighten(@secondary_color, 40%);
-        }
-      }
+    .select-custom {
+      position: relative;
 
       select {
-        padding: 0.8em;
-        color: @secondary_color;
-        border-radius: 0.3rem;
-        background-color: darken(@third_color, 5%);
-        line-height: 1.5;
-        font-size: 18px;
-        cursor: pointer;
-        padding-right: 1.75rem;
-        vertical-align: middle;
-
-        &:hover {
-          -webkit-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          -moz-box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          box-shadow: 2px 5px 10px 0px rgba(151, 151, 151, 0.75);
-          background-color: @third_color;
-        }
-
-        &:focus {
-          border-color: lighten(@primary_color, 20%);
-          outline: 0;
-        }
-
-        option {
-          text-transform: uppercase;
-        }
+        box-shadow: 0 10px 25px rgb(0, 0, 0);
+        font-size: 1.5rem;
+        padding: 1em 5em 1em 1.5em;
+        background: #4d5061;
+        color: white;
+        border: 0;
       }
-      .btn-primary {
-        margin-left: 0.5em;
-        text-transform: uppercase;
-        color: @third_color;
-        background-color: @primary_color;
-        padding: 1em 2em;
-        border-radius: 0.25rem;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid transparent;
-        line-height: 1.5;
+
+      .custom-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        background: #3b3c47;
+        height: 100%;
+        width: 4rem;
+        pointer-events: none;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &::before {
+          border-left: 0.65em solid transparent;
+          border-right: 0.65em solid transparent;
+          border-bottom: 0.65em solid rgba(255, 255, 255, 0.5);
+          top: 40%;
+        }
+
+        &::after {
+          border-left: 0.65em solid transparent;
+          border-right: 0.65em solid transparent;
+          border-top: 0.65em solid rgba(255, 255, 255, 0.5);
+          top: 60%;
+        }
       }
     }
   }
 }
- */
+
 /* FEATURED CARD */
 
 .featured-cars {
@@ -408,6 +393,7 @@ select {
 }
 
 /* TEAM */
+
 .team {
   margin: 5em;
   border-radius: 0.85rem;
@@ -564,56 +550,6 @@ select {
   }
 }
 
-/* FOOTER */
-
-.footer {
-  footer {
-    background-color: darken(@third_color, 15%);
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    bottom: 0px;
-
-    .row {
-      display: flex;
-      padding: 2.5em 5em;
-      .col-4 {
-        width: 33%;
-
-        a {
-          text-decoration: none;
-          margin: 0 0.8em;
-          i {
-            color: lighten(@secondary_color, 20%);
-          }
-        }
-
-        h3 {
-          text-transform: uppercase;
-          color: lighten(@secondary_color, 20%);
-          margin-bottom: 0.8em;
-        }
-
-        ul {
-          li {
-            margin: 0.5em 0;
-            a {
-              color: lighten(@secondary_color, 20%);
-              span {
-                i {
-                  font-size: 12px;
-                  color: lighten(@secondary_color, 20%);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 /* ABOUT US */
 
 .about-container {
@@ -679,6 +615,7 @@ select {
 }
 
 /* CONTACT */
+
 .contact-info {
   margin: 10vh 10vw;
   display: flex;
@@ -722,6 +659,8 @@ select {
     }
   }
 }
+
+/* CONTACT FORM */
 
 .contact-form {
   margin: 10vh 10vw;
@@ -932,12 +871,67 @@ select {
       display: block;
       padding: 1em 1.5em;
     }
+
+    .sell-form {
+      width: 50%;
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+
+      input {
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        padding-top: 20px;
+        border: none;
+        outline: none;
+      }
+
+      label {
+        position: absolute;
+        bottom: 0px;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0px;
+          bottom: -1px;
+          height: 100%;
+          width: 100%;
+          border-bottom: 3px solid #5fa8d3;
+          transform: translateX(-100%);
+          transition: transform all 0.3s ease;
+        }
+
+        .content-name {
+          position: absolute;
+          bottom: 5px;
+          left: 0px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      input:focus + .label-name .content-name,
+      input:valid + .label-name .content-name {
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: #5fa8d3;
+      }
+
+      input:focus + .label-name::after,
+      input:valid + .label-name::after {
+        transform: translateX(0%);
+      }
+    }
   }
 }
 
 /* SINGLE PAGE */
-
-/* SIDEBAR */
 
 .car-details {
   margin: 10vh 0vw;
@@ -988,6 +982,12 @@ select {
       border-radius: 0 3px 3px 0;
       user-select: none;
       -webkit-user-select: none;
+
+      /* On hover, add a black background color with a little bit see-through */
+      &:hover,
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
     }
 
     /* Position the "next button" to the right */
@@ -996,49 +996,38 @@ select {
       border-radius: 3px 0 0 3px;
     }
 
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
     .row {
       margin: 1em 0em;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 0.5em;
-    }
 
-    /* .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    } */
+      /* Six columns side by side */
+      .column {
+        float: left;
+        width: 100%;
 
-    /* Six columns side by side */
-    .column {
-      float: left;
-      width: 100%;
-
-      img {
-        border-radius: 0.35em;
+        img {
+          border-radius: 0.35em;
+        }
       }
-    }
 
-    /* Add a transparency effect for thumnbail images */
-    .demo {
-      opacity: 0.6;
-      height: 125px;
-    }
+      /* Add a transparency effect for thumnbail images */
+      .demo {
+        opacity: 0.6;
+        height: 125px;
+      }
 
-    .active,
-    .demo:hover {
-      opacity: 1;
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }
     }
   }
 
   .car-description {
     margin-top: 2.5em;
+
     h3 {
       font-size: clamp(20px; 1.8em, 2.8em);
       margin-bottom: 1em;
@@ -1086,6 +1075,8 @@ select {
       }
     }
   }
+
+  /* SIDEBAR */
 
   .car-main-detail {
     position: absolute;
@@ -1142,63 +1133,4 @@ select {
       }
     }
   }
-}
-
-/* MOJE JUHU */
-
-.forma {
-  width: 50%;
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-}
-
-.forma input {
-  width: 100%;
-  height: 100%;
-  color: #595f6e;
-  padding-top: 20px;
-  border: none;
-  outline: none;
-}
-
-.forma label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid black;
-}
-
-.forma label::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  height: 100%;
-  width: 100%;
-  border-bottom: 3px solid #5fa8d3;
-  transform: translateX(-100%);
-  transition: transform all 0.3s ease;
-}
-
-.content-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  transition: all 0.3s ease;
-}
-
-.forma input:focus + .label-name .content-name,
-.forma input:valid + .label-name .content-name {
-  transform: translateY(-150%);
-  font-size: 14px;
-  color: #5fa8d3;
-}
-
-.forma input:focus + .label-name::after,
-.forma input:valid + .label-name::after {
-  transform: translateX(0%);
 }
