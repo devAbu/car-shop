@@ -305,7 +305,7 @@ body {
 }
 .featured-cars .col-2 .car-box .car-info {
   color: white;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.5em 0 1.5em;
 }
 .featured-cars .col-2 .car-box .car-info h3 {
   margin-bottom: 0.5rem;
@@ -318,7 +318,7 @@ body {
 .featured-cars .col-2 .car-box .car-info .tags {
   margin-top: 0.5rem;
   overflow: hidden;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 .featured-cars .col-2 .car-box .car-info .tags span {
   margin: 0 0.5em;
@@ -719,19 +719,16 @@ body {
 /* SHOP CONTENT */
 .shop-content {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   column-gap: 1em;
   row-gap: 1em;
-  padding: 0 2em;
+  padding: 0 7em;
   padding-bottom: 2em;
 }
 .shop-content a {
   text-decoration: none;
 }
 .shop-content .car-box {
-  -webkit-box-shadow: 3px 3px 5px 0px #2e3e51;
-  -moz-box-shadow: 3px 3px 5px 0px #2e3e51;
-  box-shadow: 3px 3px 5px 0px #2e3e51;
   background-color: #2e3e51;
   border-radius: 0.8rem;
 }
@@ -741,7 +738,7 @@ body {
 }
 .shop-content .car-box .car-info {
   color: white;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.5em 0 1.5em;
 }
 .shop-content .car-box .car-info h3 {
   margin-bottom: 0.5rem;
@@ -754,7 +751,7 @@ body {
 .shop-content .car-box .car-info .tags {
   margin-top: 0.5rem;
   overflow: hidden;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 .shop-content .car-box .car-info .tags span {
   margin: 0 0.5em;
