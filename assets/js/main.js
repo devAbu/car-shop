@@ -1,4 +1,4 @@
-let xhr = new XMLHttpRequest();
+ let xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
@@ -33,4 +33,4 @@ filter_btn.addEventListener("click", () => {
     icon.classList.remove("fa-sort-down");
     filter_form.style.marginTop = "2em";
   }
-});
+}); 
