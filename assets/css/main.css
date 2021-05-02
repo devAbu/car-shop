@@ -231,6 +231,15 @@ body {
   flex-wrap: wrap;
   padding: 0 3em;
 }
+.featured-cars h2 {
+  width: 100%;
+  margin-bottom: 1.5em;
+  font-size: clamp(1.8em, 2.6em, 3.5em);
+  color: #253241;
+}
+.featured-cars h2 span {
+  color: #d01818;
+}
 .featured-cars .car-1 {
   width: 45%;
   background-color: #2e3e51;

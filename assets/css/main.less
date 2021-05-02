@@ -236,6 +236,17 @@ body {
   flex-wrap: wrap;
   padding: 0 3em;
 
+  h2 {
+    width: 100%;
+    margin-bottom: 1.5em;
+    font-size: clamp(1.8em, 2.6em, 3.5em);
+    color: @secondary_color;
+
+    span {
+      color: @primary_color;
+    }
+  }
+
   .car-1 {
     width: 45%;
     background-color: lighten(@secondary_color, 5%);
