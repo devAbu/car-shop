@@ -413,7 +413,7 @@ body {
   margin-bottom: 0.6em;
 }
 .team .glider-contain .team-text ul li {
-  font-size: clamp(14px, 16px, 2em);
+  font-size: clamp(14px, 18px, 2em);
   line-height: 1.5em;
 }
 .team .glider-contain .team-text ul li:before {
