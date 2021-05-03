@@ -753,7 +753,7 @@ body {
 /* FILTERS */
 
 .filters {
-  margin: 10vh 0vw;
+  margin: 10vh 0vw 5vh 0;
   padding: 1em 10vw;
   background-color: darken(@third_color, 5%);
 
@@ -827,6 +827,84 @@ body {
   row-gap: 1em;
   padding: 0 7em;
   padding-bottom: 2em;
+
+  /* SORT */
+
+  .sort-section {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50%);
+    position: relative;
+
+    .sort {
+      position: relative;
+
+      p {
+        margin-bottom: 0.5em;
+        color: @secondary_color;
+        font-size: clamp(16px, 20px, 2em);
+      }
+
+      .select-custom {
+        position: relative;
+
+        select {
+          box-shadow: 0 10px 25px rgb(0, 0, 0);
+          font-size: 1.1rem;
+          padding: 0.6em 2.2em 0.6em 0.6em;
+          background: lighten(@secondary_color, 5%);
+          color: @third_color;
+          border: 0;
+          width: 100%;
+        }
+
+        .custom-arrow {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          background: lighten(@secondary_color, 10%);
+          height: 100%;
+          width: 3rem;
+          pointer-events: none;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &::before {
+            border-left: 0.45em solid transparent;
+            border-right: 0.45em solid transparent;
+            border-bottom: 0.45em solid @third_color;
+            top: 40%;
+          }
+
+          &::after {
+            border-left: 0.45em solid transparent;
+            border-right: 0.45em solid transparent;
+            border-top: 0.45em solid @third_color;
+            top: 60%;
+          }
+        }
+      }
+
+      &.sort-by {
+        width: 50%;
+      }
+
+      &.products {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
 
   a {
     text-decoration: none;
