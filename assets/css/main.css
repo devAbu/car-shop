@@ -940,9 +940,22 @@ body {
   line-height: 1.5em;
   word-spacing: 0.3em;
   color: #4d4d4d;
-}
-.car-details .car-description p#more {
-  display: none;
+  /* &#box{
+        box-sizing: border-box;
+        background:orange;
+        margin:0;
+        padding: 0 40px;
+        overflow: hidden;
+        transition:all 250ms;
+      } 
+       &#more {
+        box-sizing: border-box;
+  background:orange;
+  margin:0;
+  padding: 0 40px;
+  overflow: hidden;
+  transition:all 250ms;
+      }  */
 }
 .car-details .car-description button {
   padding: 1em 1.2em;
@@ -1028,4 +1041,14 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vw;
+}
+#box {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  transition: all 2s;
+}
+.dropdown--is-open #box {
+  overflow: hidden;
+  padding-bottom: 168px;
 }
