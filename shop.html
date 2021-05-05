@@ -17,91 +17,124 @@
     <div class="navbar-include"></div>
 
     <section class="filters">
-      <button class="btn filter-btn">
-        Filter <i class="fas fa-sort-down"></i>
-      </button>
-      <form class="filter-form">
-        <div class="brand-select">
-          <select>
-            <option>Audi</option>
-            <option>BMW</option>
-            <option>Mercedes</option>
-            <option>Ford</option>
-            <option>Bentley</option>
-          </select>
+      <div class="title">
+        <h2>Vehicles</h2>
+        <span class="sort products"> Products found <span>8</span> </span>
+      </div>
+      <hr />
+
+      <div class="forms">
+        <div class="filter-form">
+          <div class="brand-select">
+            <select>
+              <option>Brand</option>
+              <option>Audi</option>
+              <option>BMW</option>
+              <option>Mercedes</option>
+              <option>Ford</option>
+              <option>Bentley</option>
+            </select>
+          </div>
+
+          <div class="model-select">
+            <select>
+              <option>Model</option>
+              <option>A4</option>
+              <option>A7</option>
+              <option>A8</option>
+              <option>AMG GT</option>
+            </select>
+          </div>
+
+          <div class="mileage-select">
+            <select>
+              <option>Mileage</option>
+              <option>< 10,000 miles</option>
+              <option>< 50,000 miles</option>
+              <option>< 100,000 miles</option>
+              <option>< 200,000 miles</option>
+              <option>200,000+ miles</option>
+            </select>
+          </div>
+
+          <div class="drive_type-select">
+            <select>
+              <option>Drive Type</option>
+              <option>AWD / 4WD</option>
+              <option>Front Wheel Drive</option>
+              <option>Back Wheel Drive</option>
+            </select>
+          </div>
+
+          <div class="feul_type-select">
+            <select>
+              <option>Fuel Type</option>
+              <option>Diesel</option>
+              <option>Electric</option>
+              <option>Hybrid</option>
+              <option>Petrol</option>
+            </select>
+          </div>
+
+          <div class="transmission">
+            <select>
+              <option>Transmission</option>
+              <option>Automatic</option>
+              <option>Manual</option>
+              <option>Semi-Automatic</option>
+            </select>
+          </div>
+
+          <div class="doors-select">
+            <select>
+              <option>Doors</option>
+              <option>2-Door</option>
+              <option>3-Door</option>
+              <option>4-Door</option>
+              <option>5-Door</option>
+            </select>
+          </div>
+
+          <div class="cylinders-select">
+            <select>
+              <option>Cylinders</option>
+              <option>4</option>
+              <option>6</option>
+              <option>8</option>
+            </select>
+          </div>
+
+          <div class="price-select">
+            <select>
+              <option>Price</option>
+              <option>Less than $2000</option>
+              <option>$2000 - $5000</option>
+              <option>$5000 - $10000</option>
+              <option>$10000 or more</option>
+            </select>
+          </div>
+
+          <div class="year-select">
+            <select>
+              <option>Year</option>
+              <option>2015</option>
+              <option>2016</option>
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+            </select>
+          </div>
         </div>
 
-        <div class="model-select">
-          <select>
-            <option>A4</option>
-            <option>A7</option>
-            <option>A8</option>
-            <option>AMG GT</option>
-          </select>
+        <div class="form-right">
+          <span class="btn filter-btn">
+            More filters<i class="fas fa-plus"></i>
+          </span>
+          <span class="btn filter-btn">Sort by<i class="fas fa-plus"></i></span>
         </div>
-
-        <div class="mileage-select">
-          <select>
-            <option>< 10,000 miles</option>
-            <option>< 50,000 miles</option>
-            <option>< 100,000 miles</option>
-            <option>< 200,000 miles</option>
-            <option>200,000+ miles</option>
-          </select>
-        </div>
-
-        <div class="drive_type-select">
-          <select>
-            <option>AWD / 4WD</option>
-            <option>Front Wheel Drive</option>
-            <option>Back Wheel Drive</option>
-          </select>
-        </div>
-
-        <div class="feul_type-select">
-          <select>
-            <option>Diesel</option>
-            <option>Electric</option>
-            <option>Hybrid</option>
-            <option>Petrol</option>
-          </select>
-        </div>
-
-        <div class="transmission">
-          <select>
-            <option>Automatic</option>
-            <option>Manual</option>
-            <option>Semi-Automatic</option>
-          </select>
-        </div>
-
-        <div class="doors-select">
-          <select>
-            <option>2-Door</option>
-            <option>3-Door</option>
-            <option>4-Door</option>
-            <option>5-Door</option>
-          </select>
-        </div>
-
-        <div class="cylinders-select">
-          <select>
-            <option>4</option>
-            <option>6</option>
-            <option>8</option>
-          </select>
-        </div>
-
-        <div class="price-select">
-          <input type="number" placeholder="Min Price" />
-          <input type="number" placeholder="Max Price" />
-        </div>
-
-        <div class="year-select">
-          <input type="number" placeholder="Min Year" />
-          <input type="number" placeholder="Max Year" />
-        </div>
-      </form>
+      </div>
     </section>
 
     <section class="shop-content">
