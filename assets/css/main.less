@@ -1,6 +1,12 @@
 @import "colors.less";
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Oxygen&family=Poppins&family=Raleway&family=Ubuntu&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Oxygen&family=Poppins&family=Raleway&family=Ubuntu&display=swap"); */
+@font-face {
+  font-family: "AdihausDIN";
+  src: url("../fonts/729-font.ttf") format("truetype");
+}
+:root {
+  --rownum: 0;
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +19,8 @@
 
 body {
   background-color: darken(@third_color, 2.5%);
-  font-family: "Ubuntu", sans-serif;
+  font-family: "AdihausDIN", Helvetica, Arial, sans-serif;
+  letter-spacing: 3px;
 }
 
 /* NAVBAR */
@@ -614,6 +621,7 @@ body {
       padding-right: 5em;
       font-size: clamp(14px, 16px, 1.5em);
       line-height: 27px;
+      letter-spacing: 2px;
 
       .spec {
         margin: 1.2em 0;
@@ -757,62 +765,69 @@ body {
   padding: 1em 10vw;
   background-color: darken(@third_color, 5%);
 
+  .title {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .sort {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      span {
+        color: @primary_color;
+      }
+    }
+  }
+
   .filter-btn {
-    margin-left: 0.5em;
-    text-transform: uppercase;
-    color: @third_color;
-    background-color: @secondary_color;
-    padding: 1em 2em;
-    border-radius: 0.25rem;
-    text-align: center;
+    color: @secondary_color;
     vertical-align: middle;
-    border: 1px solid transparent;
     line-height: 1.5;
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    position: relative;
-
-    i {
-      float: right;
-      position: absolute;
-      right: 0.5em;
-    }
-
-    .show-form {
-      background-color: red;
-    }
-
-    &:hover {
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24),
-        0 8px 10px 0 rgba(0, 0, 0, 0.19);
-    }
   }
 
-  form {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out, margin-top 0.2s ease;
+  .forms {
+    position: relative;
+    text-transform: uppercase;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 55% 40%;
     grid-row-gap: 2em;
     justify-content: space-around;
+    align-content: space-between;
+    margin-top: 1em;
 
-    div {
-      width: 100%;
+    .filter-form {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 2em;
+      grid-auto-rows: var(--rownum);
 
-      input,
-      select {
-        border-radius: 0.35em;
-        padding: 1em 0.5em;
-        width: 80%;
+      div {
+        select {
+          text-transform: uppercase;
+          width: 100%;
+          border: none;
+          outline: none;
+          background: transparent;
+        }
       }
+    }
 
-      input {
-        border: none;
-        outline: none;
-        width: 40%;
-        display: inline-block;
+    .form-right {
+      position: absolute;
+      right: 0;
+
+      span {
+        margin: 0 0.5em;
+
+        i {
+          margin-left: 0.5em;
+        }
       }
     }
   }
@@ -830,7 +845,7 @@ body {
 
   /* SORT */
 
-  .sort-section {
+  /* .sort-section {
     grid-column: 1 / 5;
     display: grid;
     grid-template-columns: repeat(auto-fit, 50%);
@@ -904,7 +919,7 @@ body {
         bottom: 0;
       }
     }
-  }
+  } */
 
   a {
     text-decoration: none;
@@ -1148,29 +1163,20 @@ body {
       font-size: clamp(20px; 1.8em, 2.8em);
       margin-bottom: 1em;
     }
+
     p {
       line-height: 1.5em;
       word-spacing: 0.3em;
       color: darken(@third_color, 70%);
+      letter-spacing: 2px;
 
-       /* &#box{
+      &#box {
         box-sizing: border-box;
-        background:orange;
-        margin:0;
-        padding: 0 40px;
+        margin: 0;
         overflow: hidden;
-        transition:all 250ms;
-      } 
-       &#more {
-        box-sizing: border-box;
-  background:orange;
-  margin:0;
-  padding: 0 40px;
-  overflow: hidden;
-  transition:all 250ms;
-      }  */
+        transition: all 2s;
+      }
     }
-   
 
     button {
       padding: 1em 1.2em;
@@ -1263,21 +1269,6 @@ body {
       }
     }
   }
-}
-
-/*Test Contact*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-.scrollDist {
-  position: absolute;
-  width: 100vw;
-  height: 100vw;
-}
-
-#box{
-  box-sizing: border-box;
-  margin:0;
-  overflow: hidden;
-  transition:all 2s;
 }
 
 .dropdown--is-open #box {
