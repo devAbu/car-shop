@@ -542,7 +542,8 @@ body {
   justify-content: space-between;
 }
 .prom div {
-  background-color: #ced8e3;
+  /*     background-color: lighten(@secondary_color, 65%);
+ */
   padding: 3em 4em;
   text-align: center;
 }
@@ -1100,4 +1101,92 @@ body {
 }
 .related-cars .grid img {
   width: 100%;
+}
+.grid {
+  display: grid ;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.grid div {
+  padding: 1rem;
+}
+.boxes {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.boxes .box {
+  display: block;
+  float: left;
+  position: relative;
+  width: 400px;
+  height: 350px;
+  text-align: center;
+  border-collapse: collapse;
+  text-decoration: none;
+  color: #a21313;
+  overflow: hidden;
+}
+.boxes .box h3 {
+  transition: all 0.5s;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.boxes .box i {
+  transition: all 0.4s;
+  font-size: 4em;
+}
+.boxes .box p {
+  transition: all 0.5s;
+  margin-top: 70px;
+}
+.boxes .box:before {
+  transition: all 0.4s;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  left: 50%;
+  margin-left: -50%;
+  top: 25%;
+  border-color: rgba(200, 200, 200, 0);
+  border-style: solid;
+  border-width: 0 1px;
+}
+.boxes .box:after {
+  transition: all 0.4s;
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  margin-left: -25%;
+  top: 0;
+  border-color: rgba(200, 200, 200, 0);
+  border-style: solid;
+  border-width: 1px 0;
+}
+.boxes .box:hover {
+  color: #415772;
+  /* &:after{
+        width:402px;
+        margin-left:-50%;
+        border-color:rgba(90,90,90,1);
+      } */
+}
+.boxes .box:hover h3 {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.boxes .box:hover p {
+  margin-top: 30px;
+}
+.boxes .box:hover:before {
+  height: 352px;
+  top: 0%;
+  border-color: #5a5a5a;
+  border-radius: 40%;
 }

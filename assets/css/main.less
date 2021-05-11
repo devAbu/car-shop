@@ -647,8 +647,8 @@ body {
   justify-content: space-between;
 
   div {
-    background-color: lighten(@secondary_color, 65%);
-    padding: 3em 4em;
+/*     background-color: lighten(@secondary_color, 65%);
+ */    padding: 3em 4em;
     text-align: center;
 
     h4 {
@@ -1303,6 +1303,101 @@ body {
     }
     img {
       width: 100%;
+    }
+  }
+}
+
+
+
+
+.boxes {
+  text-align:center;
+  position:relative;
+  width:100%;
+  margin:0 auto;
+  
+  .box{
+    display:block;
+    float:left;
+    position:relative;
+    width:400px;
+    height:350px;
+    text-align:center;
+    border-collapse:collapse;
+    text-decoration:none;
+    color:darken(@primary_color, 10%);
+    overflow: hidden;
+    
+    h3{
+      transition: all 0.5s;  
+      padding-top:50px; 
+      padding-bottom:60px; margin:0;
+      font-size:2em;
+      text-transform:uppercase;
+    }
+    
+    i {
+      transition: all 0.4s;  
+      font-size:4em;
+    }
+    
+    p{
+      transition: all 0.5s;  
+      margin-top:70px;
+    }
+    
+    &:before{
+      transition: all 0.4s;  
+      position:absolute;
+      content:"";
+      width:100%;
+      height:50%;
+      left:50%;
+      margin-left:-50%;
+      top:25%;
+      border-color:rgba(200,200,200,0);
+      border-style:solid;
+      border-width:0 1px;
+    }
+    
+    &:after{
+      transition: all 0.4s;  
+      position:absolute;
+      content:"";
+      width:50%;
+      height:100%;
+      left:50%;
+      margin-left:-25%;
+      top:0;
+      border-color:rgba(200,200,200,0);
+      border-style:solid;
+      border-width:1px 0;
+    }
+    
+    &:hover{
+      color: lighten(@secondary_color, 15%);
+      
+       h3{
+        padding-top:80px;
+        padding-bottom:30px;
+      }
+      
+      p{
+        margin-top:30px;
+      }
+      
+      /* &:after{
+        width:402px;
+        margin-left:-50%;
+        border-color:rgba(90,90,90,1);
+      } */
+      
+      &:before{
+        height:352px;
+        top:0%;
+        border-color:rgba(90,90,90,1);
+        border-radius: 40%;
+      }
     }
   }
 }
