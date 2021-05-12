@@ -699,82 +699,6 @@ body {
   row-gap: 1em;
   padding: 0 7em;
   padding-bottom: 2em;
-  /* SORT */
-  /* .sort-section {
-    grid-column: 1 / 5;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 50%);
-    position: relative;
-
-    .sort {
-      position: relative;
-
-      p {
-        margin-bottom: 0.5em;
-        color: @secondary_color;
-        font-size: clamp(16px, 20px, 2em);
-      }
-
-      .select-custom {
-        position: relative;
-
-        select {
-          box-shadow: 0 10px 25px rgb(0, 0, 0);
-          font-size: 1.1rem;
-          padding: 0.6em 2.2em 0.6em 0.6em;
-          background: lighten(@secondary_color, 5%);
-          color: @third_color;
-          border: 0;
-          width: 100%;
-        }
-
-        .custom-arrow {
-          position: absolute;
-          top: 0;
-          right: 0;
-          display: block;
-          background: lighten(@secondary_color, 10%);
-          height: 100%;
-          width: 3rem;
-          pointer-events: none;
-
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          &::before {
-            border-left: 0.45em solid transparent;
-            border-right: 0.45em solid transparent;
-            border-bottom: 0.45em solid @third_color;
-            top: 40%;
-          }
-
-          &::after {
-            border-left: 0.45em solid transparent;
-            border-right: 0.45em solid transparent;
-            border-top: 0.45em solid @third_color;
-            top: 60%;
-          }
-        }
-      }
-
-      &.sort-by {
-        width: 50%;
-      }
-
-      &.products {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-    }
-  } */
 }
 .shop-content a {
   text-decoration: none;
@@ -829,16 +753,10 @@ body {
 .submit-car p {
   margin-top: 1.5em;
 }
-.submit-car .details {
-  margin-top: 1.5em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5em;
-}
-.submit-car .details input[type="file"] {
+.submit-car input[type="file"] {
   display: none;
 }
-.submit-car .details .car-image-label {
+.submit-car .car-image-label {
   color: white;
   background-color: #f5af09;
   font-size: 20px;
@@ -846,56 +764,6 @@ body {
   width: 150px;
   display: block;
   padding: 1em 1.5em;
-}
-.submit-car .details .sell-form {
-  width: 50%;
-  position: relative;
-  height: 50px;
-  overflow: hidden;
-}
-.submit-car .details .sell-form input {
-  width: 100%;
-  height: 100%;
-  color: #595f6e;
-  padding-top: 20px;
-  border: none;
-  outline: none;
-}
-.submit-car .details .sell-form label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 1px solid black;
-}
-.submit-car .details .sell-form label::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -1px;
-  height: 100%;
-  width: 100%;
-  border-bottom: 3px solid #5fa8d3;
-  transform: translateX(-100%);
-  transition: transform all 0.3s ease;
-}
-.submit-car .details .sell-form label .content-name {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  transition: all 0.3s ease;
-}
-.submit-car .details .sell-form input:focus + .label-name .content-name,
-.submit-car .details .sell-form input:valid + .label-name .content-name {
-  transform: translateY(-150%);
-  font-size: 14px;
-  color: #5fa8d3;
-}
-.submit-car .details .sell-form input:focus + .label-name::after,
-.submit-car .details .sell-form input:valid + .label-name::after {
-  transform: translateX(0%);
 }
 /* SINGLE PAGE */
 .car-details {
@@ -1328,13 +1196,13 @@ body {
   border-radius: 50%;
 }
 .footer-section .facebook-bg {
-  background: #3B5998;
+  background: #3b5998;
 }
 .footer-section .twitter-bg {
-  background: #55ACEE;
+  background: #55acee;
 }
 .footer-section .google-bg {
-  background: #DD4B39;
+  background: #dd4b39;
 }
 .footer-section .footer-widget-heading h3 {
   color: #253241;
