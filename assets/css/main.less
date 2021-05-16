@@ -149,7 +149,7 @@ body {
 
 .buy-options {
   background-color: @third_color;
-  margin: -5% 15% 10% 15%;
+  margin: -5% 15% 5% 15%;
   padding: 3em 5em;
   border-radius: 0.3rem;
   display: flex;
@@ -822,6 +822,12 @@ body {
     .form-right {
       position: absolute;
       right: 0;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 1em;
+      grid-template-areas:
+        "fl sr"
+        "hh btn";
 
       span {
         margin: 0 0.5em;
@@ -829,6 +835,18 @@ body {
         i {
           margin-left: 0.5em;
         }
+      }
+
+      button {
+        border: 1px solid @secondary_color;
+        outline: none;
+        background: transparent;
+        color: @secondary_color;
+        padding: 0 2.5em;
+        border-radius: 0.85em;
+        cursor: pointer;
+        height: 30px;
+        grid-area: btn;
       }
     }
   }
@@ -1026,7 +1044,7 @@ body {
     p {
       line-height: 1.5em;
       word-spacing: 0.3em;
-      color: darken(@third_color, 70%);
+      color: darken(@third_color, 80%);
       letter-spacing: 2px;
 
       &#box {
@@ -1135,30 +1153,46 @@ body {
   padding-bottom: 168px;
 }
 
+/* RELATED CARS */
 .related-cars {
-  padding: 1em;
+  padding: 0em 5vw 2em 5vw;
+
   .related-title {
     h3 {
       color: black;
       font-weight: normal;
       margin: 1.75rem 0 1rem 0;
-      font-size: 2rem;
+      font-size: clamp(16px, 28px, 3em);
     }
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 1em;
+
+    .box {
+      background-color: lighten(@secondary_color, 5%);
+      border-radius: 0.8rem;
+      -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+      -moz-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+      box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
+    }
+
     h4 {
       color: black;
       font-weight: normal;
       margin: 1.75rem 0 1rem 0;
-      font-size: 1.5rem;
+      font-size: clamp(14px, 16px, 2.5em);
       margin: 1rem 0 0.5rem 0;
+      color: @third_color;
+      padding: 0 1em;
     }
     .price {
       margin: 0;
+      color: @third_color;
+      padding: 0 1em 0.5em 1em;
+      font-size: clamp(12px, 14px, 1.4em);
     }
     img {
       width: 100%;

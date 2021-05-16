@@ -115,7 +115,7 @@ body {
 /* Car Search */
 .buy-options {
   background-color: white;
-  margin: -5% 15% 10% 15%;
+  margin: -5% 15% 5% 15%;
   padding: 3em 5em;
   border-radius: 0.3rem;
   display: flex;
@@ -684,12 +684,27 @@ body {
 .filters .forms .form-right {
   position: absolute;
   right: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+  grid-template-areas: "fl sr" "hh btn";
 }
 .filters .forms .form-right span {
   margin: 0 0.5em;
 }
 .filters .forms .form-right span i {
   margin-left: 0.5em;
+}
+.filters .forms .form-right button {
+  border: 1px solid #253241;
+  outline: none;
+  background: transparent;
+  color: #253241;
+  padding: 0 2.5em;
+  border-radius: 0.85em;
+  cursor: pointer;
+  height: 30px;
+  grid-area: btn;
 }
 /* SHOP CONTENT */
 .shop-content {
@@ -858,7 +873,7 @@ body {
 .car-details .car-description p {
   line-height: 1.5em;
   word-spacing: 0.3em;
-  color: #4d4d4d;
+  color: #333333;
   letter-spacing: 2px;
 }
 .car-details .car-description p#box {
@@ -943,29 +958,42 @@ body {
   overflow: hidden;
   padding-bottom: 168px;
 }
+/* RELATED CARS */
 .related-cars {
-  padding: 1em;
+  padding: 0em 5vw 2em 5vw;
 }
 .related-cars .related-title h3 {
   color: black;
   font-weight: normal;
   margin: 1.75rem 0 1rem 0;
-  font-size: 2rem;
+  font-size: clamp(16px, 28px, 3em);
 }
 .related-cars .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 1em;
+}
+.related-cars .grid .box {
+  background-color: #2e3e51;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 3px 3px 5px 0px #2e3e51;
+  -moz-box-shadow: 3px 3px 5px 0px #2e3e51;
+  box-shadow: 3px 3px 5px 0px #2e3e51;
 }
 .related-cars .grid h4 {
   color: black;
   font-weight: normal;
   margin: 1.75rem 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: clamp(14px, 16px, 2.5em);
   margin: 1rem 0 0.5rem 0;
+  color: white;
+  padding: 0 1em;
 }
 .related-cars .grid .price {
   margin: 0;
+  color: white;
+  padding: 0 1em 0.5em 1em;
+  font-size: clamp(12px, 14px, 1.4em);
 }
 .related-cars .grid img {
   width: 100%;
