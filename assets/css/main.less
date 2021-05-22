@@ -917,25 +917,183 @@ body {
 
 .submit-car {
   margin: 10vh 0vw;
-  padding: 1em 10vw;
+  padding: 1em 5vw;
   background-color: darken(@third_color, 5%);
 
   p {
     margin-top: 1.5em;
   }
 
-  input[type="file"] {
-    display: none;
-  }
+  #sell_form {
+    background-color: #ffffff;
+    padding: 1em 2.5em;
+    margin-top: 1.5em;
+    border-radius: 0.35em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-  .car-image-label {
-    color: white;
-    background-color: #f5af09;
-    font-size: 20px;
-    cursor: pointer;
-    width: 150px;
-    display: block;
-    padding: 1em 1.5em;
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid #aaaaaa;
+      margin: 0.5em;
+      border-radius: 0.35em;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+      width: 90%;
+    }
+
+    .radio-tab {
+      input[type="radio"] {
+        opacity: 0;
+        position: fixed;
+        width: 0;
+
+        &:checked + label {
+          background-color: lighten(@secondary_color, 15%);
+        }
+
+        &.invalid {
+          background-color: #ffdddd;
+        }
+      }
+
+      label {
+        display: inline-block;
+        background-color: darken(@third_color, 5%);
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid grey;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: lighten(@secondary_color, 25%);
+        }
+      }
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
+    button {
+      border: 1px solid @secondary_color;
+      outline: none;
+      background: transparent;
+      color: @secondary_color;
+      padding: 0 2.5em;
+      border-radius: 0.85em;
+      cursor: pointer;
+      height: 30px;
+      margin-top: 1em;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #prevBtn {
+      background-color: #e0e0e0;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: darken(@third_color, 15%);
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .step.active {
+      opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #04aa6d;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .car-image-label {
+      color: white;
+      background-color: #f5af09;
+      font-size: 20px;
+      cursor: pointer;
+      width: 150px;
+      display: block;
+      padding: 1em 1.5em;
+    }
+
+    .select-custom {
+      position: relative;
+      width: 90%;
+
+      select {
+        font-size: 17px;
+        margin: 0 0.5em;
+        padding: 0.6em 2.2em 0.6em 0.6em;
+        background: lighten(@secondary_color, 5%);
+        color: @third_color;
+        border: 0;
+        width: 100%;
+      }
+
+      .custom-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        background: lighten(@secondary_color, 10%);
+        height: 100%;
+        width: 3rem;
+        pointer-events: none;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &::before {
+          border-left: 0.45em solid transparent;
+          border-right: 0.45em solid transparent;
+          border-bottom: 0.45em solid @third_color;
+          top: 40%;
+        }
+
+        &::after {
+          border-left: 0.45em solid transparent;
+          border-right: 0.45em solid transparent;
+          border-top: 0.45em solid @third_color;
+          top: 60%;
+        }
+      }
+    }
   }
 }
 
