@@ -188,6 +188,7 @@ body {
         color: @third_color;
         border: 0;
         width: 100%;
+        cursor: pointer;
       }
 
       .custom-arrow {
@@ -235,6 +236,7 @@ body {
       position: absolute;
       bottom: 0;
       font-size: clamp(14px, 18px, 1.8em);
+      cursor: pointer;
     }
   }
 }
@@ -257,6 +259,11 @@ body {
     }
   }
 
+  a {
+    text-decoration: none;
+    color: @third_color;
+  }
+
   .car-1 {
     width: 45%;
     background-color: lighten(@secondary_color, 5%);
@@ -270,6 +277,7 @@ body {
       height: 80%;
       width: 100%;
     }
+
     .car-info {
       color: @third_color;
       padding: 0.5em 1.5em;
@@ -643,13 +651,10 @@ body {
 
 .prom {
   margin: 5vh 10vw;
-  display: flex;
   justify-content: space-between;
 
   div {
-    /*     background-color: lighten(@secondary_color, 65%);
- */
-    padding: 3em 4em;
+    display: flex;
     text-align: center;
 
     h4 {
@@ -753,6 +758,22 @@ body {
       textarea {
         resize: none;
       }
+
+      button {
+        border: none;
+        outline: none;
+        background-color: lighten(@secondary_color, 5%);
+        color: @third_color;
+        padding: 0.6em 2.5em;
+        border-radius: 0.85em;
+        font-size: clamp(14px, 18px, 1.8em);
+        cursor: pointer;
+        width: 80%;
+        margin: 1em;
+        -webkit-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+      }
     }
   }
 }
@@ -815,6 +836,7 @@ body {
           border: none;
           outline: none;
           background: transparent;
+          cursor: pointer;
         }
       }
     }
@@ -864,6 +886,7 @@ body {
 
   a {
     text-decoration: none;
+    color: @third_color;
   }
 
   .car-box {
@@ -1328,6 +1351,10 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 1em;
+
+    a {
+      text-decoration: none;
+    }
 
     .box {
       background-color: lighten(@secondary_color, 5%);

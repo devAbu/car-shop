@@ -151,6 +151,7 @@ body {
   color: white;
   border: 0;
   width: 100%;
+  cursor: pointer;
 }
 .row .brand-selection .select-custom .custom-arrow {
   position: absolute;
@@ -193,6 +194,7 @@ body {
   position: absolute;
   bottom: 0;
   font-size: clamp(14px, 18px, 1.8em);
+  cursor: pointer;
 }
 /* FEATURED CARD */
 .featured-cars {
@@ -208,6 +210,10 @@ body {
 }
 .featured-cars h2 span {
   color: #d01818;
+}
+.featured-cars a {
+  text-decoration: none;
+  color: white;
 }
 .featured-cars .car-1 {
   width: 45%;
@@ -538,13 +544,10 @@ body {
 /* PROM */
 .prom {
   margin: 5vh 10vw;
-  display: flex;
   justify-content: space-between;
 }
 .prom div {
-  /*     background-color: lighten(@secondary_color, 65%);
- */
-  padding: 3em 4em;
+  display: flex;
   text-align: center;
 }
 .prom div h4 {
@@ -629,6 +632,21 @@ body {
 .contact-form .form-container form textarea {
   resize: none;
 }
+.contact-form .form-container form button {
+  border: none;
+  outline: none;
+  background-color: #2e3e51;
+  color: white;
+  padding: 0.6em 2.5em;
+  border-radius: 0.85em;
+  font-size: clamp(14px, 18px, 1.8em);
+  cursor: pointer;
+  width: 80%;
+  margin: 1em;
+  -webkit-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1.5px 2px 7px 0px rgba(0, 0, 0, 0.3);
+}
 /* SHOP */
 /* FILTERS */
 .filters {
@@ -680,6 +698,7 @@ body {
   border: none;
   outline: none;
   background: transparent;
+  cursor: pointer;
 }
 .filters .forms .form-right {
   position: absolute;
@@ -717,6 +736,7 @@ body {
 }
 .shop-content a {
   text-decoration: none;
+  color: white;
 }
 .shop-content .car-box {
   background-color: #2e3e51;
@@ -1103,6 +1123,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 1em;
+}
+.related-cars .grid a {
+  text-decoration: none;
 }
 .related-cars .grid .box {
   background-color: #2e3e51;
