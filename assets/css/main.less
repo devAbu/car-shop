@@ -246,7 +246,7 @@ body {
 .featured-cars {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 3em;
+  padding: 0 1.5em;
 
   h2 {
     width: 100%;
@@ -265,10 +265,10 @@ body {
   }
 
   .car-1 {
-    width: 45%;
+    width: 45vw;
     background-color: lighten(@secondary_color, 5%);
     border-radius: 0.8rem;
-    margin: 1em;
+    margin: 1em 0;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
     -moz-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
     box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
@@ -318,7 +318,7 @@ body {
   .col-2 {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 50vw;
 
     .car-box {
       -webkit-box-shadow: 3px 3px 5px 0px rgba(46, 62, 81, 1);
@@ -330,7 +330,7 @@ body {
       border-radius: 0.8rem;
 
       img {
-        height: 200px;
+        height: 15em;
         width: 100%;
       }
       .car-info {
@@ -397,6 +397,7 @@ body {
       margin: 0 0.8em;
       box-shadow: rgb(255 255 255 / 50%) 0px 30px 60px -12px inset,
         rgb(253 255 255 / 30%) 0px 18px 36px -18px inset;
+      width: 100%;
 
       &:after {
         content: "";
@@ -425,6 +426,7 @@ body {
       margin: 0 0.8em;
       box-shadow: rgb(0 0 0 / 50%) 0px -30px 60px -12px inset,
         rgb(0 0 0 / 30%) 0px 18px 36px -18px inset;
+      width: 100%;
 
       &:after {
         content: "";
@@ -451,7 +453,7 @@ body {
 /* TEAM */
 
 .team {
-  margin: 5em;
+  margin: 2.5em;
   border-radius: 0.85rem;
   .glider-contain {
     background-color: darken(@secondary_color, 5%);
@@ -544,13 +546,13 @@ body {
         border-radius: 0.8em;
         padding-bottom: 1.2em;
 
+        .p_img {
+          border-radius: 0.8em 0.8em 0 0;
+          width: 100%;
+        }
         .box {
           position: relative;
           padding: 0 1.2em;
-
-          .p_img {
-            border-radius: 0.8em 0.8em 0 0;
-          }
 
           .fas {
             background-color: @primary_color;
@@ -643,6 +645,9 @@ body {
     .about-img {
       height: 100%;
       border-radius: 1.25em;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -1395,8 +1400,7 @@ body {
     display: block;
     float: left;
     position: relative;
-    width: 400px;
-    height: 350px;
+    width: 100%;
     text-align: center;
     border-collapse: collapse;
     text-decoration: none;
@@ -1485,7 +1489,7 @@ body {
     margin-left: auto;
   }
 
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     .container {
       max-width: 540px;
     }
@@ -1509,7 +1513,7 @@ body {
     .container {
       max-width: 1320px;
     }
-  }
+  } */
 
   .pt-5 {
     padding-top: 3rem !important;
@@ -1692,5 +1696,267 @@ body {
   .footer-menu li a {
     font-size: 14px;
     color: #878787;
+  }
+}
+
+/* LARGE SCREENS */
+@media only screen and (min-width: 1600px) {
+  .shop-content {
+    .car-box {
+      .car-info {
+        .tags {
+          span {
+            margin: 0.5em 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .featured-cars {
+    .car-1 {
+      img {
+        height: 85%;
+      }
+    }
+    .col-2 {
+      .car-box {
+        img {
+          height: 25em;
+        }
+      }
+    }
+  }
+
+  .car-details {
+    .car-images-carousel {
+      .mySlides {
+        img {
+          height: 45em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 3001px) {
+  .featured-cars {
+    .col-2 {
+      .car-box {
+        img {
+          height: 35em;
+        }
+      }
+    }
+  }
+
+  .shop-content {
+    grid-template-columns: repeat(auto-t, minmax(30em, auto));
+  }
+}
+
+@media only screen and (min-width: 4400px) {
+  .featured-cars {
+    .car-1 {
+      img {
+        height: 90%;
+      }
+    }
+    .col-2 {
+      .car-box {
+        img {
+          height: 45em;
+        }
+      }
+    }
+  }
+}
+
+/* SMALL SCREENS */
+/* @media only screen and (max-width: 1366px) {
+  .featured-cars {
+    padding: 0 1.5em;
+  }
+  .team {
+    margin: 2.5em;
+  }
+} */
+
+@media only screen and (max-width: 1280px) {
+  .buy-options {
+    .row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .featured-cars {
+    padding: 0 0 0 1.5em;
+
+    .car-1 {
+      margin: 0.5em;
+    }
+    .col-2 .car-box {
+      margin: 0.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .featured-cars {
+    padding: 0 1.5em;
+
+    .car-1 {
+      width: 100vw;
+      height: 60vh;
+
+      img {
+        height: 70%;
+      }
+    }
+
+    .col-2 {
+      width: 100vw;
+
+      .car-box {
+        margin: 0.5em;
+      }
+    }
+  }
+
+  .options {
+    padding: 0 5em;
+
+    .img-banner {
+      display: none;
+    }
+
+    .row {
+      flex-wrap: wrap;
+      margin-top: auto;
+
+      .sell-car {
+        &:after {
+          content: none;
+        }
+      }
+
+      .buy-car {
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .team {
+    .team-text {
+      width: 40%;
+    }
+    .glider.draggable {
+      width: 60%;
+    }
+  }
+}
+
+@media only screen and (max-width: 687px) {
+  .featured-cars {
+    .col-2 {
+      .car-box {
+        margin: 0.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  .buy-options {
+    .row {
+      grid-template-columns: 1fr;
+
+      .brand-selection {
+        .btn {
+          position: unset;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .featured-cars {
+    .col-2 {
+      .car-box {
+        width: 100vw;
+      }
+    }
+  }
+
+  .options {
+    padding: 0 1em;
+  }
+
+  .team {
+    margin: 1.5em;
+
+    .glider-contain {
+      flex-wrap: wrap;
+      padding: 1em;
+
+      .team-text {
+        width: 100%;
+      }
+
+      .glider.draggable {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .buy-options {
+    padding: 3em 2em;
+  }
+
+  .featured-cars {
+    .car-1 {
+      height: 70vh;
+
+      .car-info {
+        .tags {
+          span {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .buy-options {
+    padding: 3em 1em;
+    margin-bottom: 15%;
+  }
+
+  .featured-cars {
+    padding: 0;
+
+    h2 {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .options {
+    padding: 0;
+  }
+
+  .team {
+    margin: 0.5em;
   }
 }
