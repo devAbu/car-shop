@@ -523,9 +523,10 @@ body {
 .about-container .about-content {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 .about-container .about-content > * {
-  width: 100%;
+  width: 45%;
 }
 .about-container .about-content .about-text {
   padding-right: 5em;
@@ -555,6 +556,10 @@ body {
 .prom div {
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
+}
+.prom div > .box {
+  width: 33%;
 }
 .prom div h4 {
   font-size: clamp(14px, 16px, 1.5em);
@@ -1459,6 +1464,9 @@ body {
   .car-details .car-images-carousel .mySlides img {
     height: 45em;
   }
+  .about-container .about-content .about-img img {
+    height: 550px;
+  }
 }
 @media only screen and (min-width: 3001px) {
   .featured-cars .col-2 .car-box img {
@@ -1489,6 +1497,10 @@ body {
   .buy-options .row {
     grid-template-columns: repeat(2, 1fr);
   }
+  .prom {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
 @media only screen and (max-width: 1080px) {
   .featured-cars {
@@ -1499,6 +1511,10 @@ body {
   }
   .featured-cars .col-2 .car-box {
     margin: 0.5em;
+  }
+  .prom {
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1539,6 +1555,22 @@ body {
   }
   .team .glider.draggable {
     width: 60%;
+  }
+  .about-container .about-content > * {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .about-container .about-content .about-img img {
+    height: 350px;
+  }
+  .about-container .about-content .about-text {
+    padding-right: 0;
+  }
+  .prom div > .box {
+    width: 50%;
+  }
+  .prom div > .box:nth-child(3) {
+    margin: 2em auto;
   }
 }
 @media only screen and (max-width: 687px) {
@@ -1585,6 +1617,9 @@ body {
   }
   .featured-cars .car-1 .car-info .tags span {
     margin: 0;
+  }
+  .prom div > .box {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 320px) {
