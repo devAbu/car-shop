@@ -205,6 +205,7 @@ body {
 /* HERO SECTION */
 .hero {
   height: 95vh;
+  text-shadow: 4px 4px 6px #969696;
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -212,7 +213,7 @@ body {
   background-position: center;
 }
 .hero h1 {
-  font-size: clamp(14px, 5em, 6vw);
+  font-size: clamp(2.5em, 5em, 6vw);
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -377,7 +378,7 @@ body {
   -webkit-box-shadow: 3px 3px 5px 0px #2e3e51;
   -moz-box-shadow: 3px 3px 5px 0px #2e3e51;
   box-shadow: 3px 3px 5px 0px #2e3e51;
-  width: 45%;
+  width: 47%;
   margin: 1em;
   background-color: #2e3e51;
   border-radius: 0.8rem;
@@ -1706,11 +1707,36 @@ body {
   }
 }
 @media only screen and (max-width: 687px) {
+  .hero {
+    height: 85vh;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+  }
+  .buy-options {
+    margin-top: -20%;
+    margin-bottom: 10%;
+  }
+  .featured-cars h2 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px #969696;
+  }
   .featured-cars .col-2 .car-box {
     margin: 0.5em;
   }
 }
 @media only screen and (max-width: 603px) {
+  .hero {
+    height: 85vh;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+  }
+  .buy-options {
+    margin-top: -30%;
+    margin-bottom: 10%;
+  }
   .buy-options .row {
     grid-template-columns: 1fr;
   }
@@ -1718,10 +1744,47 @@ body {
     position: unset;
     width: 100%;
   }
+  .featured-cars h2 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px #969696;
+  }
+  .featured-cars .car-1 h3 {
+    font-size: 1.3em;
+  }
+  .featured-cars .car-1 .car-info .tags span {
+    margin: 0;
+  }
+  .featured-cars .car-1 .car-info .tags .year {
+    padding: 0.3em 0.7em;
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (max-width: 540px) {
+  .hero {
+    height: 85vh;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+  }
+  .buy-options {
+    margin-top: -30%;
+    margin-bottom: 10%;
+  }
   .featured-cars .col-2 .car-box {
     width: 100vw;
+  }
+  .featured-cars h2 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px #969696;
+  }
+  .featured-cars .car-1 h3 {
+    font-size: 1.3em;
+  }
+  .featured-cars .car-1 .car-info .tags .year {
+    padding: 0.25em 0.7em;
+    margin-bottom: 10px;
   }
   .options {
     padding: 0 1em;
@@ -1736,43 +1799,105 @@ body {
   .team .glider-contain .team-text {
     width: 100%;
   }
+  .team .glider-contain .team-text .glider-prev,
+  .team .glider-contain .team-text .glider-next {
+    font-size: 18px;
+  }
   .team .glider-contain .glider.draggable {
     width: 100%;
+  }
+  .team .glider-slide {
+    min-width: 220px;
   }
   .contact-info > div {
     width: 80%;
   }
 }
 @media only screen and (max-width: 480px) {
+  .hero {
+    height: 90vh;
+  }
   .buy-options {
     padding: 3em 2em;
+    margin-top: -30%;
+    margin-bottom: 10%;
+  }
+  .featured-cars h2 {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 {
-    height: 70vh;
+    height: 60vh;
+  }
+  .featured-cars .car-1 img {
+    height: 60%;
+  }
+  .featured-cars .car-1 h3 {
+    font-size: 1.3em;
   }
   .featured-cars .car-1 .car-info .tags span {
     margin: 0;
+  }
+  .featured-cars .car-1 .car-info .tags .year {
+    padding: 0.3em 0.7em;
+    margin-bottom: 10px;
+  }
+  .team .glider-contain .team-text .glider-prev {
+    font-size: 17px;
+  }
+  .team .glider-contain .team-text .glider-next {
+    font-size: 17px;
+  }
+  .team .glider-slide {
+    min-width: 220px;
   }
   .prom div > .box {
     width: 100%;
   }
 }
 @media only screen and (max-width: 320px) {
+  .hero {
+    height: 85vh;
+  }
   .buy-options {
     padding: 3em 1em;
     margin-bottom: 15%;
+    margin-top: -40%;
   }
   .featured-cars {
     padding: 0;
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px #969696;
+  }
+  .featured-cars .car-1 {
+    height: 55vh;
+  }
+  .featured-cars .car-1 img {
+    height: 60%;
+  }
+  .featured-cars .car-1 .car-info .tags .year {
+    padding: 0.3em 0.7em;
+    margin-bottom: 10px;
   }
   .options {
     padding: 0;
   }
   .team {
     margin: 0.5em;
+  }
+  .team .glider-contain .team-text .glider-prev {
+    font-size: 15px;
+  }
+  .team .glider-contain .team-text .glider-next {
+    font-size: 15px;
+  }
+  .team .glider-slide {
+    min-width: 200px;
   }
   .submit-car {
     padding-left: 0.5em;
