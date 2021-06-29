@@ -189,8 +189,6 @@ body {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
-
 /* FOOTER */
 
 .footer {
@@ -249,7 +247,7 @@ body {
 
 .hero {
   height: 95vh;
-  text-shadow:  4px 4px 6px rgba(150, 150, 150, 1);;
+  text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -980,9 +978,9 @@ body {
       display: grid;
       grid-template-columns: auto auto;
       gap: 1em;
-      grid-template-areas:
+      /* grid-template-areas:
         "fl sr"
-        "hh btn";
+        "hh btn"; */
 
       span {
         margin: 0 0.5em;
@@ -1001,7 +999,7 @@ body {
         border-radius: 0.85em;
         cursor: pointer;
         height: 30px;
-        grid-area: btn;
+        /* grid-area: btn; */
       }
     }
   }
@@ -1891,7 +1889,7 @@ body {
   }
 
   .shop-content {
-    grid-template-columns: repeat(auto-t, minmax(30em, auto));
+    grid-template-columns: repeat(auto-fit, minmax(25em, auto));
   }
 }
 
@@ -1933,6 +1931,14 @@ body {
     margin-left: 5vw;
     margin-right: 5vw;
   }
+
+  .filters {
+    .forms {
+      .filter-form {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -1958,6 +1964,14 @@ body {
   .prom {
     margin-left: 2vw;
     margin-right: 2vw;
+  }
+
+  .filters {
+    .forms {
+      .filter-form {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 }
 
@@ -2068,12 +2082,20 @@ body {
       margin-top: 1em;
     }
   }
+
+  .filters {
+    padding: 1em 4vw;
+  }
+
+  .shop-content {
+    padding: 0 3em;
+  }
 }
 
 @media only screen and (max-width: 687px) {
   .hero {
     height: 85vh;
-    h1{
+    h1 {
       font-size: 3.5em;
     }
   }
@@ -2083,8 +2105,8 @@ body {
     margin-bottom: 10%;
   }
   .featured-cars {
-    h2{
-      margin-bottom: .5em;
+    h2 {
+      margin-bottom: 0.5em;
       font-weight: bold;
       text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
     }
@@ -2094,12 +2116,20 @@ body {
       }
     }
   }
+
+  .filters {
+    .forms {
+      .form-right {
+        grid-template-columns: auto;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 603px) {
   .hero {
     height: 85vh;
-    h1{
+    h1 {
       font-size: 3.5em;
     }
   }
@@ -2120,45 +2150,47 @@ body {
     }
   }
 
-  .featured-cars{
+  .featured-cars {
     h2 {
-    margin-bottom: .5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
-  }
-  .car-1{
-    h3{
-      font-size: 1.3em;
+      margin-bottom: 0.5em;
+      font-weight: bold;
+      text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
     }
-    .car-info {
-      .tags {
-        span {
-          margin: 0;
+    .car-1 {
+      h3 {
+        font-size: 1.3em;
+      }
+      .car-info {
+        .tags {
+          span {
+            margin: 0;
           }
-          .year{
+          .year {
             padding: 0.3em 0.7em;
             margin-bottom: 10px;
+          }
         }
       }
     }
   }
+
+  .shop-content {
+    padding: 0 1em;
   }
 }
 
 @media only screen and (max-width: 540px) {
   .hero {
     height: 85vh;
-    h1{
+    h1 {
       font-size: 3.5em;
     }
   }
 
-  .buy-options{
+  .buy-options {
     margin-top: -30%;
     margin-bottom: 10%;
-
   }
-
 
   .featured-cars {
     .col-2 {
@@ -2171,19 +2203,19 @@ body {
       font-weight: bold;
       text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
     }
-.car-1{
-  h3{
-    font-size: 1.3em;
-  }
-    .car-info{
-      .tags{
-        .year{
-          padding: 0.25em 0.7em;
-          margin-bottom: 10px;
+    .car-1 {
+      h3 {
+        font-size: 1.3em;
+      }
+      .car-info {
+        .tags {
+          .year {
+            padding: 0.25em 0.7em;
+            margin-bottom: 10px;
+          }
         }
       }
     }
-  }
   }
 
   .options {
@@ -2199,7 +2231,8 @@ body {
 
       .team-text {
         width: 100%;
-        .glider-prev, .glider-next{
+        .glider-prev,
+        .glider-next {
           font-size: 18px;
         }
       }
@@ -2208,7 +2241,7 @@ body {
         width: 100%;
       }
     }
-    .glider-slide{
+    .glider-slide {
       min-width: 220px;
     }
   }
@@ -2218,10 +2251,13 @@ body {
       width: 80%;
     }
   }
+
+  .shop-content {
+    padding: 0 0.5em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-
   .hero {
     height: 90vh;
   }
@@ -2230,23 +2266,22 @@ body {
     padding: 3em 2em;
     margin-top: -30%;
     margin-bottom: 10%;
-
   }
 
   .featured-cars {
-    h2{
-      margin-bottom: .5em;
+    h2 {
+      margin-bottom: 0.5em;
       font-weight: bold;
       text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
     }
     .car-1 {
       height: 60vh;
 
-      img{
+      img {
         height: 60%;
       }
 
-      h3{
+      h3 {
         font-size: 1.3em;
       }
 
@@ -2254,30 +2289,28 @@ body {
         .tags {
           span {
             margin: 0;
-            }
-            .year{
-              padding: 0.3em 0.7em;
-              margin-bottom: 10px;
+          }
+          .year {
+            padding: 0.3em 0.7em;
+            margin-bottom: 10px;
           }
         }
       }
     }
-
-    
   }
-  .team{
-    .glider-contain{
-      .team-text{
-        .glider-prev{
+  .team {
+    .glider-contain {
+      .team-text {
+        .glider-prev {
           font-size: 17px;
         }
-        .glider-next{
+        .glider-next {
           font-size: 17px;
         }
       }
     }
 
-    .glider-slide{
+    .glider-slide {
       min-width: 220px;
     }
   }
@@ -2289,13 +2322,15 @@ body {
       }
     }
   }
+
+  .shop-content {
+    padding: 0 3em;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-
   .hero {
     height: 85vh;
-    
   }
   .buy-options {
     padding: 3em 1em;
@@ -2312,22 +2347,21 @@ body {
       font-weight: bold;
       text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
     }
-    .car-1{
+    .car-1 {
       height: 55vh;
 
-      img{
+      img {
         height: 60%;
       }
-      .car-info{
-      .tags{
-        .year{
-          padding: 0.3em 0.7em;
-          margin-bottom: 10px;
+      .car-info {
+        .tags {
+          .year {
+            padding: 0.3em 0.7em;
+            margin-bottom: 10px;
+          }
         }
       }
     }
-    }
-
   }
 
   .options {
@@ -2337,23 +2371,21 @@ body {
   .team {
     margin: 0.5em;
 
-    .glider-contain{
-      .team-text{
-        .glider-prev{
+    .glider-contain {
+      .team-text {
+        .glider-prev {
           font-size: 15px;
         }
-        .glider-next{
+        .glider-next {
           font-size: 15px;
         }
       }
     }
 
-    .glider-slide{
+    .glider-slide {
       min-width: 200px;
     }
   }
-
- 
 
   .submit-car {
     padding-left: 0.5em;
@@ -2364,6 +2396,24 @@ body {
       padding-right: 0;
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+
+  .shop-content {
+    padding: 0 1.5em;
+  }
+
+  .filters {
+    .forms {
+      grid-template-columns: auto;
+
+      .filter-form {
+        grid-template-columns: auto;
+        display: none;
+      }
+      .form-right {
+        position: relative;
+      }
     }
   }
 }

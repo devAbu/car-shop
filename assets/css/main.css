@@ -826,7 +826,9 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1em;
-  grid-template-areas: "fl sr" "hh btn";
+  /* grid-template-areas:
+        "fl sr"
+        "hh btn"; */
 }
 .filters .forms .form-right span {
   margin: 0 0.5em;
@@ -843,7 +845,7 @@ body {
   border-radius: 0.85em;
   cursor: pointer;
   height: 30px;
-  grid-area: btn;
+  /* grid-area: btn; */
 }
 /* SHOP CONTENT */
 .shop-content {
@@ -1582,7 +1584,7 @@ body {
     height: 35em;
   }
   .shop-content {
-    grid-template-columns: repeat(auto-t, minmax(30em, auto));
+    grid-template-columns: repeat(auto-fit, minmax(25em, auto));
   }
 }
 @media only screen and (min-width: 4400px) {
@@ -1610,6 +1612,9 @@ body {
     margin-left: 5vw;
     margin-right: 5vw;
   }
+  .filters .forms .filter-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media only screen and (max-width: 1150px) {
   .contact-info div {
@@ -1630,6 +1635,9 @@ body {
   .prom {
     margin-left: 2vw;
     margin-right: 2vw;
+  }
+  .filters .forms .filter-form {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -1705,6 +1713,12 @@ body {
   .contact-form .form-container {
     margin-top: 1em;
   }
+  .filters {
+    padding: 1em 4vw;
+  }
+  .shop-content {
+    padding: 0 3em;
+  }
 }
 @media only screen and (max-width: 687px) {
   .hero {
@@ -1724,6 +1738,9 @@ body {
   }
   .featured-cars .col-2 .car-box {
     margin: 0.5em;
+  }
+  .filters .forms .form-right {
+    grid-template-columns: auto;
   }
 }
 @media only screen and (max-width: 603px) {
@@ -1758,6 +1775,9 @@ body {
   .featured-cars .car-1 .car-info .tags .year {
     padding: 0.3em 0.7em;
     margin-bottom: 10px;
+  }
+  .shop-content {
+    padding: 0 1em;
   }
 }
 @media only screen and (max-width: 540px) {
@@ -1812,6 +1832,9 @@ body {
   .contact-info > div {
     width: 80%;
   }
+  .shop-content {
+    padding: 0 0.5em;
+  }
 }
 @media only screen and (max-width: 480px) {
   .hero {
@@ -1854,6 +1877,9 @@ body {
   }
   .prom div > .box {
     width: 100%;
+  }
+  .shop-content {
+    padding: 0 3em;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -1908,5 +1934,18 @@ body {
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+  }
+  .shop-content {
+    padding: 0 1.5em;
+  }
+  .filters .forms {
+    grid-template-columns: auto;
+  }
+  .filters .forms .filter-form {
+    grid-template-columns: auto;
+    display: none;
+  }
+  .filters .forms .form-right {
+    position: relative;
   }
 }
