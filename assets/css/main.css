@@ -1243,7 +1243,7 @@ body {
 }
 .related-cars .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1em;
 }
 .related-cars .grid a {
@@ -1639,6 +1639,13 @@ body {
   .filters .forms .filter-form {
     grid-template-columns: repeat(2, 1fr);
   }
+  .car-details {
+    padding: 1em 1vw;
+    grid-template-columns: 50% 50%;
+  }
+  .related-cars {
+    padding: 0em 1vw 1em 1vw;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .contact-info {
@@ -1719,6 +1726,25 @@ body {
   .shop-content {
     padding: 0 3em;
   }
+  .car-details {
+    grid-template-columns: auto;
+  }
+  .left {
+    order: 2;
+  }
+  .right {
+    order: 1;
+  }
+  .car-details {
+    padding: 1em 5vw;
+  }
+  .car-details .car-main-detail {
+    position: relative;
+    right: 0;
+  }
+  .related-cars {
+    padding: 0em 5vw 2em 5vw;
+  }
 }
 @media only screen and (max-width: 687px) {
   .hero {
@@ -1741,6 +1767,9 @@ body {
   }
   .filters .forms .form-right {
     grid-template-columns: auto;
+  }
+  .car-details .car-images-carousel .row {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (max-width: 603px) {
@@ -1947,5 +1976,8 @@ body {
   }
   .filters .forms .form-right {
     position: relative;
+  }
+  .car-details .car-images-carousel .row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
