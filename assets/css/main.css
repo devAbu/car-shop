@@ -378,8 +378,8 @@ body {
   -webkit-box-shadow: 3px 3px 5px 0px #2e3e51;
   -moz-box-shadow: 3px 3px 5px 0px #2e3e51;
   box-shadow: 3px 3px 5px 0px #2e3e51;
-  width: 47%;
-  margin: 1em;
+  width: 45%;
+  margin: 1em 0.5em;
   background-color: #2e3e51;
   border-radius: 0.8rem;
 }
