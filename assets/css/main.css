@@ -241,6 +241,10 @@ body {
 .row .brand-selection {
   position: relative;
 }
+.row .brand-selection.btn-center {
+  display: flex;
+  justify-content: center;
+}
 .row .brand-selection p {
   margin-bottom: 0.5em;
   color: #253241;
@@ -313,9 +317,11 @@ body {
 }
 .featured-cars h2 {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
   font-size: clamp(1.8em, 2.6em, 3.5em);
   color: #253241;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px #969696;
 }
 .featured-cars h2 span {
   color: #d01818;
@@ -343,6 +349,7 @@ body {
 }
 .featured-cars .car-1 .car-info h3 {
   margin-bottom: 1rem;
+  font-size: clamp(1em, 1.7em, 3em);
 }
 .featured-cars .car-1 .car-info hr {
   border: 1px solid #5f5f5f;
@@ -1475,7 +1482,7 @@ body {
 }
 .footer-section .footer-text p {
   margin-bottom: 14px;
-  font-size: 14px;
+  font-size: clamp(14px, 1em, 2.5em);
   color: #7e7e7e;
   line-height: 28px;
 }
@@ -1625,10 +1632,11 @@ body {
   .buy-options .row {
     grid-template-columns: repeat(2, 1fr);
   }
+  .featured-cars .car-1 img {
+    height: 75%;
+  }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .prom {
     margin-left: 5vw;
@@ -1661,8 +1669,6 @@ body {
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 {
     margin: 0.5em;
@@ -1727,12 +1733,12 @@ body {
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 {
-    width: 100vw;
+    width: 50vw;
     height: 60vh;
+    margin: 0 auto;
+    display: none;
   }
   .featured-cars .car-1 img {
     height: 75%;
@@ -1834,10 +1840,11 @@ body {
     margin-top: -20%;
     margin-bottom: 10%;
   }
+  .row .brand-selection .btn {
+    font-size: clamp(14px, 16px, 1.6em);
+  }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .col-2 .car-box {
     margin: 0.5em;
@@ -1869,8 +1876,6 @@ body {
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 h3 {
     font-size: 1.3em;
@@ -1902,8 +1907,6 @@ body {
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 h3 {
     font-size: 1.3em;
@@ -1953,8 +1956,6 @@ body {
   }
   .featured-cars h2 {
     margin-bottom: 0.5em;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 {
     height: 60vh;
@@ -2003,8 +2004,6 @@ body {
   .featured-cars h2 {
     margin-bottom: 0.5em;
     text-align: center;
-    font-weight: bold;
-    text-shadow: 4px 4px 6px #969696;
   }
   .featured-cars .car-1 {
     height: 55vh;
