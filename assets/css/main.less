@@ -745,6 +745,7 @@ body {
     margin-bottom: 1.5rem;
     font-size: clamp(22px, 58px, 5em);
     color: @secondary_color;
+    text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
   }
 
   .about-content {
@@ -811,44 +812,54 @@ body {
 /* CONTACT */
 
 .contact-info {
-  margin: 15vh 10vw;
-  display: flex;
-  justify-content: space-around;
+  margin: 10vh 10vw;
 
-  & > * {
-    width: 100%;
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(22px, 58px, 5em);
+    color: @secondary_color;
+    text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
   }
 
-  div {
-    background-color: lighten(@secondary_color, 65%);
-    padding: 1.2em 3em;
-    text-align: center;
-    margin: 0.5em;
-    border-radius: 0.5em;
+  .contact-content {
+    display: flex;
+    justify-content: space-around;
 
-    &:not(.icon) {
-      -webkit-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+    & > * {
+      width: 100%;
     }
 
-    &.icon {
-      color: darken(@primary_color, 10%);
-    }
+    div {
+      background-color: lighten(@secondary_color, 65%);
+      padding: 1.2em 3em;
+      text-align: center;
+      margin: 0.5em;
+      border-radius: 0.5em;
 
-    h4 {
-      font-size: clamp(14px, 16px, 1.5em);
-      font-weight: 500;
-    }
-    p {
-      font-size: clamp(12px, 14px, 1.2em);
-      font-weight: bold;
-      margin-top: 1em;
-      line-height: 30px;
+      &:not(.icon) {
+        -webkit-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
+      }
 
-      a {
-        text-decoration: none;
-        color: black;
+      &.icon {
+        color: darken(@primary_color, 10%);
+      }
+
+      h4 {
+        font-size: clamp(14px, 16px, 1.5em);
+        font-weight: 500;
+      }
+      p {
+        font-size: clamp(12px, 14px, 1.2em);
+        font-weight: bold;
+        margin-top: 1em;
+        line-height: 30px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
@@ -872,7 +883,8 @@ body {
 
   .form-container {
     h3 {
-      font-size: clamp(16px, 36px, 1.7em);
+      text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+      font-size: clamp(24px, 1.8em, 3.3em);
 
       span {
         color: @primary_color;
@@ -1079,8 +1091,12 @@ body {
 
 .submit-car {
   margin: 10vh 0vw;
-  padding: 1em 5vw;
+  padding: 1em 15vw;
   background-color: darken(@third_color, 5%);
+
+  h2 {
+    text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+  }
 
   p {
     margin-top: 1.5em;
@@ -1100,6 +1116,11 @@ body {
 
     label {
       display: block;
+      font-size: clamp(16px, 1.25em, 2.3em);
+    }
+
+    p {
+      font-size: clamp(16px, 1.25em, 2.3em);
     }
 
     input {
@@ -1162,6 +1183,7 @@ body {
       cursor: pointer;
       height: 30px;
       margin-top: 1em;
+      font-size: clamp(16px, 1.25em, 2.3em);
     }
 
     button:hover {
@@ -1262,7 +1284,7 @@ body {
 /* SINGLE PAGE */
 
 .car-details {
-  margin: 10vh 0vw;
+  margin: 10vh 0 3vh 0;
   padding: 1em 5vw;
   overflow-x: hidden;
   display: grid;
@@ -1417,9 +1439,11 @@ body {
 
     .title {
       h1 {
+        font-size: clamp(22px, 2em, 3.2em);
         color: @secondary_color;
-        font-weight: 400;
         padding-bottom: 0.8em;
+        text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
+        font-weight: bold;
       }
     }
 
@@ -1479,8 +1503,9 @@ body {
 
   .related-title {
     h3 {
+      text-shadow: 4px 4px 6px rgba(150, 150, 150, 1);
       color: black;
-      font-weight: normal;
+      font-weight: 600;
       margin: 1.75rem 0 1rem 0;
       font-size: clamp(16px, 28px, 3em);
     }
@@ -1507,16 +1532,16 @@ body {
       color: black;
       font-weight: normal;
       margin: 1.75rem 0 1rem 0;
-      font-size: clamp(14px, 16px, 2.5em);
+      font-size: clamp(16px, 18px, 2.8em);
       margin: 1rem 0 0.5rem 0;
       color: @third_color;
       padding: 0 1em;
     }
     .price {
       margin: 0;
-      color: @third_color;
+      color: @primary_color;
       padding: 0 1em 0.5em 1em;
-      font-size: clamp(12px, 14px, 1.4em);
+      font-size: clamp(14px, 16px, 1.8em);
     }
     img {
       width: 100%;
@@ -1861,6 +1886,91 @@ body {
       min-width: 300px;
     }
   }
+
+  .about-container {
+    .about-content {
+      .about-text {
+        font-size: clamp(18px, 1.25em, 1.8em);
+
+        .spec {
+          font-size: clamp(18px, 1.15em, 1.7em);
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    .form-container {
+      h3 {
+        font-size: clamp(24px, 2.5em, 3.3em);
+      }
+    }
+  }
+
+  .submit-car {
+    h2 {
+      font-size: clamp(18px, 2.2em, 3em);
+    }
+    p {
+      font-size: clamp(18px, 1.7em, 2.5em);
+    }
+  }
+
+  .car-details {
+    .car-main-detail {
+      .title {
+        h1 {
+          font-size: clamp(26px, 2.6em, 3.2em);
+        }
+      }
+      .car-data {
+        span {
+          font-size: clamp(16px, 22px, 1.7em);
+        }
+      }
+
+      .details {
+        font-size: clamp(16px, 20px, 1.7em);
+      }
+    }
+    .car-description {
+      h3 {
+        font-size: clamp(20px, 2.3em, 2.8em);
+      }
+      p {
+        font-size: larger;
+      }
+    }
+
+    .car-features {
+      h3 {
+        font-size: clamp(20px, 2.15em, 2.6em);
+      }
+      .features {
+        font-size: larger;
+      }
+    }
+  }
+
+  .related-cars {
+    .related-title {
+      h3 {
+        font-size: clamp(20px, 2.3em, 2.8em);
+      }
+    }
+
+    .grid {
+      .box {
+        h4 {
+          font-size: x-large;
+        }
+        .price {
+          font-size: larger;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 2300px) {
@@ -1894,6 +2004,112 @@ body {
       .about-img {
         img {
           height: 550px;
+        }
+      }
+    }
+  }
+
+  .about-container {
+    h2 {
+      font-size: clamp(58px, 7em, 12em);
+    }
+
+    .about-content {
+      .about-text {
+        font-size: clamp(16px, 1.8em, 3em);
+        line-height: 35px;
+
+        .spec {
+          font-size: clamp(16px, 1.2em, 2.2em);
+          line-height: 35px;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .prom {
+    .boxes {
+      .box {
+        i {
+          font-size: 6em;
+        }
+        p {
+          font-size: clamp(18px, 1.8em, 2.4em);
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    h2 {
+      font-size: clamp(58px, 7em, 12em);
+    }
+
+    .contact-content {
+      div {
+        i {
+          font-size: 4.2em;
+        }
+        h4 {
+          font-size: clamp(16px, 2em, 2.5em);
+        }
+        p {
+          font-size: clamp(14px, 1.3em, 1.8em);
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    .form-container {
+      h3 {
+        font-size: clamp(24px, 3.5em, 4em);
+      }
+
+      form {
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          padding: 1.7em 0.85em;
+          font-size: 1.25em;
+        }
+
+        button {
+          padding: 1.3em 2.5em;
+        }
+      }
+    }
+  }
+
+  .submit-car {
+    h2 {
+      font-size: clamp(22px, 2.7em, 3.3em);
+    }
+    p {
+      font-size: clamp(18px, 1.9em, 2.7em);
+    }
+
+    #sell_form {
+      label {
+        font-size: clamp(18px, 1.7em, 2.5em);
+      }
+      p {
+        font-size: clamp(18px, 1.7em, 2.3em);
+      }
+
+      input {
+        font-size: 1.7em;
+      }
+      .radio-tab {
+        label {
+          font-size: 1.5em;
+        }
+      }
+
+      .select-custom {
+        select {
+          font-size: 1.5em;
         }
       }
     }
@@ -1984,12 +2200,18 @@ body {
   .options {
     padding: 0 5em;
   }
+
+  .contact-info {
+    margin: 10vh 5vw;
+  }
 }
 @media only screen and (max-width: 1150px) {
   .contact-info {
-    div {
-      padding-left: 1em;
-      padding-right: 1em;
+    .contact-content {
+      div {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
     }
   }
 }
@@ -2062,7 +2284,7 @@ body {
   }
 
   .car-details {
-    padding: 1em 1vw;
+    padding: 1em 2.5vw;
     grid-template-columns: 50% 50%;
   }
 
@@ -2073,10 +2295,12 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .contact-info {
-    flex-wrap: wrap;
+    .contact-content {
+      flex-wrap: wrap;
 
-    & > div {
-      width: 40%;
+      & > div {
+        width: 40%;
+      }
     }
   }
 
@@ -2087,6 +2311,22 @@ body {
   .team {
     .glider-slide {
       min-width: 240px;
+    }
+  }
+
+  .about-container {
+    .about-content {
+      align-items: center;
+      .about-img {
+        height: 350px;
+      }
+    }
+  }
+
+  .contact-form {
+    margin: 10vh 3vw;
+    iframe {
+      width: 90%;
     }
   }
 }
@@ -2174,13 +2414,17 @@ body {
 
   .about-container {
     .about-content {
+      text-align: center;
+
       & > * {
         width: 100%;
         margin-top: 1em;
       }
       .about-img {
+        height: 250px;
         img {
-          height: 350px;
+          height: 90%;
+          width: 70%;
         }
       }
       .about-text {
@@ -2222,10 +2466,6 @@ body {
     padding: 0 3em;
   }
 
-  .car-details {
-    grid-template-columns: auto;
-  }
-
   .left {
     order: 2;
   }
@@ -2235,15 +2475,31 @@ body {
 
   .car-details {
     padding: 1em 5vw;
+    grid-template-columns: auto;
+    margin: 10vh 0 2vh 0;
 
     .car-main-detail {
       position: relative;
       right: 0;
+
+      .title {
+        font-size: clamp(18px, 1.8em, 2.8em);
+      }
+
+      .car-data {
+        span {
+          font-size: clamp(16px, 1.3em, 1.7em);
+        }
+      }
     }
   }
 
   .related-cars {
     padding: 0em 5vw 2em 5vw;
+
+    .related-products {
+      text-align: center;
+    }
   }
 }
 
@@ -2290,6 +2546,17 @@ body {
     .car-images-carousel {
       .row {
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  .about-container {
+    .about-content {
+      .about-text {
+        .spec {
+          width: 100%;
+          padding-left: 0.3em;
+        }
       }
     }
   }
@@ -2412,13 +2679,40 @@ body {
   }
 
   .contact-info {
-    & > div {
-      width: 80%;
+    .contact-content {
+      & > div {
+        width: 80%;
+      }
     }
   }
 
   .shop-content {
     padding: 0 0.5em;
+  }
+
+  .submit-car {
+    padding: 1em 5vw;
+
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  .car-details {
+    .car-main-detail {
+      position: relative;
+      right: 0;
+
+      .title {
+        font-size: clamp(18px, 1.5em, 2.25em);
+      }
+
+      .car-data {
+        span {
+          font-size: clamp(16px, 1.2em, 1.7em);
+        }
+      }
+    }
   }
 }
 
@@ -2461,6 +2755,16 @@ body {
       }
     }
   }
+  .car-details {
+    .car-images-carousel {
+      .prev,
+      .next {
+        top: 20%;
+        margin-top: 0;
+      }
+    }
+  }
+
   .team {
     .glider-contain {
       .team-text {
@@ -2482,6 +2786,7 @@ body {
     div {
       & > .box {
         width: 100%;
+        padding-bottom: 2.5em;
       }
     }
   }
@@ -2557,6 +2862,27 @@ body {
       padding-right: 0;
       margin-left: 0;
       margin-right: 0;
+
+      .tab-title {
+        font-size: 1.45em;
+      }
+
+      .tab-5,
+      .tab-6 {
+        padding: 0 1em;
+      }
+
+      .car-image-label {
+        font-size: 18px;
+        width: 120px;
+        padding: 1em;
+      }
+
+      .radio-tab {
+        label {
+          margin: 0.5em;
+        }
+      }
     }
   }
 
@@ -2584,5 +2910,19 @@ body {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    .car-main-detail {
+      .details {
+        padding: 1.5em 1.5em;
+      }
+    }
+  }
+
+  .contact-info {
+    margin-bottom: 5vh;
+  }
+
+  .contact-form {
+    margin-top: 5vh;
   }
 }

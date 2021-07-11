@@ -635,6 +635,7 @@ body {
   margin-bottom: 1.5rem;
   font-size: clamp(22px, 58px, 5em);
   color: #253241;
+  text-shadow: 4px 4px 6px #969696;
 }
 .about-container .about-content {
   display: flex;
@@ -688,39 +689,47 @@ body {
 }
 /* CONTACT */
 .contact-info {
-  margin: 15vh 10vw;
+  margin: 10vh 10vw;
+}
+.contact-info h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(22px, 58px, 5em);
+  color: #253241;
+  text-shadow: 4px 4px 6px #969696;
+}
+.contact-info .contact-content {
   display: flex;
   justify-content: space-around;
 }
-.contact-info > * {
+.contact-info .contact-content > * {
   width: 100%;
 }
-.contact-info div {
+.contact-info .contact-content div {
   background-color: #ced8e3;
   padding: 1.2em 3em;
   text-align: center;
   margin: 0.5em;
   border-radius: 0.5em;
 }
-.contact-info div:not(.icon) {
+.contact-info .contact-content div:not(.icon) {
   -webkit-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 4px 7px 0px rgba(0, 0, 0, 0.75);
 }
-.contact-info div.icon {
+.contact-info .contact-content div.icon {
   color: #a21313;
 }
-.contact-info div h4 {
+.contact-info .contact-content div h4 {
   font-size: clamp(14px, 16px, 1.5em);
   font-weight: 500;
 }
-.contact-info div p {
+.contact-info .contact-content div p {
   font-size: clamp(12px, 14px, 1.2em);
   font-weight: bold;
   margin-top: 1em;
   line-height: 30px;
 }
-.contact-info div p a {
+.contact-info .contact-content div p a {
   text-decoration: none;
   color: black;
 }
@@ -738,7 +747,8 @@ body {
   height: 90%;
 }
 .contact-form .form-container h3 {
-  font-size: clamp(16px, 36px, 1.7em);
+  text-shadow: 4px 4px 6px #969696;
+  font-size: clamp(24px, 1.8em, 3.3em);
 }
 .contact-form .form-container h3 span {
   color: #d01818;
@@ -911,8 +921,11 @@ body {
 /* SELL CAR */
 .submit-car {
   margin: 10vh 0vw;
-  padding: 1em 5vw;
+  padding: 1em 15vw;
   background-color: #f2f2f2;
+}
+.submit-car h2 {
+  text-shadow: 4px 4px 6px #969696;
 }
 .submit-car p {
   margin-top: 1.5em;
@@ -933,6 +946,10 @@ body {
 }
 .submit-car #sell_form label {
   display: block;
+  font-size: clamp(16px, 1.25em, 2.3em);
+}
+.submit-car #sell_form p {
+  font-size: clamp(16px, 1.25em, 2.3em);
 }
 .submit-car #sell_form input {
   padding: 10px;
@@ -981,6 +998,7 @@ body {
   cursor: pointer;
   height: 30px;
   margin-top: 1em;
+  font-size: clamp(16px, 1.25em, 2.3em);
 }
 .submit-car #sell_form button:hover {
   opacity: 0.8;
@@ -1062,7 +1080,7 @@ body {
 }
 /* SINGLE PAGE */
 .car-details {
-  margin: 10vh 0vw;
+  margin: 10vh 0 3vh 0;
   padding: 1em 5vw;
   overflow-x: hidden;
   display: grid;
@@ -1195,9 +1213,11 @@ body {
   right: 5vw;
 }
 .car-details .car-main-detail .title h1 {
+  font-size: clamp(22px, 2em, 3.2em);
   color: #253241;
-  font-weight: 400;
   padding-bottom: 0.8em;
+  text-shadow: 4px 4px 6px #969696;
+  font-weight: bold;
 }
 .car-details .car-main-detail .car-data span {
   font-size: clamp(16px, 18px, 1.7em);
@@ -1243,8 +1263,9 @@ body {
   padding: 0em 5vw 2em 5vw;
 }
 .related-cars .related-title h3 {
+  text-shadow: 4px 4px 6px #969696;
   color: black;
-  font-weight: normal;
+  font-weight: 600;
   margin: 1.75rem 0 1rem 0;
   font-size: clamp(16px, 28px, 3em);
 }
@@ -1267,16 +1288,16 @@ body {
   color: black;
   font-weight: normal;
   margin: 1.75rem 0 1rem 0;
-  font-size: clamp(14px, 16px, 2.5em);
+  font-size: clamp(16px, 18px, 2.8em);
   margin: 1rem 0 0.5rem 0;
   color: white;
   padding: 0 1em;
 }
 .related-cars .grid .price {
   margin: 0;
-  color: white;
+  color: #d01818;
   padding: 0 1em 0.5em 1em;
-  font-size: clamp(12px, 14px, 1.4em);
+  font-size: clamp(14px, 16px, 1.8em);
 }
 .related-cars .grid img {
   width: 100%;
@@ -1580,6 +1601,52 @@ body {
   .team .glider-slide {
     min-width: 300px;
   }
+  .about-container .about-content .about-text {
+    font-size: clamp(18px, 1.25em, 1.8em);
+  }
+  .about-container .about-content .about-text .spec {
+    font-size: clamp(18px, 1.15em, 1.7em);
+    width: 90%;
+  }
+  .contact-form .form-container h3 {
+    font-size: clamp(24px, 2.5em, 3.3em);
+  }
+  .submit-car h2 {
+    font-size: clamp(18px, 2.2em, 3em);
+  }
+  .submit-car p {
+    font-size: clamp(18px, 1.7em, 2.5em);
+  }
+  .car-details .car-main-detail .title h1 {
+    font-size: clamp(26px, 2.6em, 3.2em);
+  }
+  .car-details .car-main-detail .car-data span {
+    font-size: clamp(16px, 22px, 1.7em);
+  }
+  .car-details .car-main-detail .details {
+    font-size: clamp(16px, 20px, 1.7em);
+  }
+  .car-details .car-description h3 {
+    font-size: clamp(20px, 2.3em, 2.8em);
+  }
+  .car-details .car-description p {
+    font-size: larger;
+  }
+  .car-details .car-features h3 {
+    font-size: clamp(20px, 2.15em, 2.6em);
+  }
+  .car-details .car-features .features {
+    font-size: larger;
+  }
+  .related-cars .related-title h3 {
+    font-size: clamp(20px, 2.3em, 2.8em);
+  }
+  .related-cars .grid .box h4 {
+    font-size: x-large;
+  }
+  .related-cars .grid .box .price {
+    font-size: larger;
+  }
 }
 @media only screen and (min-width: 2300px) {
   .featured-cars .car-1 img {
@@ -1593,6 +1660,69 @@ body {
   }
   .about-container .about-content .about-img img {
     height: 550px;
+  }
+  .about-container h2 {
+    font-size: clamp(58px, 7em, 12em);
+  }
+  .about-container .about-content .about-text {
+    font-size: clamp(16px, 1.8em, 3em);
+    line-height: 35px;
+  }
+  .about-container .about-content .about-text .spec {
+    font-size: clamp(16px, 1.2em, 2.2em);
+    line-height: 35px;
+    width: 90%;
+  }
+  .prom .boxes .box i {
+    font-size: 6em;
+  }
+  .prom .boxes .box p {
+    font-size: clamp(18px, 1.8em, 2.4em);
+  }
+  .contact-info h2 {
+    font-size: clamp(58px, 7em, 12em);
+  }
+  .contact-info .contact-content div i {
+    font-size: 4.2em;
+  }
+  .contact-info .contact-content div h4 {
+    font-size: clamp(16px, 2em, 2.5em);
+  }
+  .contact-info .contact-content div p {
+    font-size: clamp(14px, 1.3em, 1.8em);
+  }
+  .contact-form .form-container h3 {
+    font-size: clamp(24px, 3.5em, 4em);
+  }
+  .contact-form .form-container form input[type="text"],
+  .contact-form .form-container form input[type="email"],
+  .contact-form .form-container form textarea {
+    padding: 1.7em 0.85em;
+    font-size: 1.25em;
+  }
+  .contact-form .form-container form button {
+    padding: 1.3em 2.5em;
+  }
+  .submit-car h2 {
+    font-size: clamp(22px, 2.7em, 3.3em);
+  }
+  .submit-car p {
+    font-size: clamp(18px, 1.9em, 2.7em);
+  }
+  .submit-car #sell_form label {
+    font-size: clamp(18px, 1.7em, 2.5em);
+  }
+  .submit-car #sell_form p {
+    font-size: clamp(18px, 1.7em, 2.3em);
+  }
+  .submit-car #sell_form input {
+    font-size: 1.7em;
+  }
+  .submit-car #sell_form .radio-tab label {
+    font-size: 1.5em;
+  }
+  .submit-car #sell_form .select-custom select {
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 3001px) {
@@ -1648,9 +1778,12 @@ body {
   .options {
     padding: 0 5em;
   }
+  .contact-info {
+    margin: 10vh 5vw;
+  }
 }
 @media only screen and (max-width: 1150px) {
-  .contact-info div {
+  .contact-info .contact-content div {
     padding-left: 1em;
     padding-right: 1em;
   }
@@ -1698,7 +1831,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .car-details {
-    padding: 1em 1vw;
+    padding: 1em 2.5vw;
     grid-template-columns: 50% 50%;
   }
   .related-cars {
@@ -1706,10 +1839,10 @@ body {
   }
 }
 @media only screen and (max-width: 1000px) {
-  .contact-info {
+  .contact-info .contact-content {
     flex-wrap: wrap;
   }
-  .contact-info > div {
+  .contact-info .contact-content > div {
     width: 40%;
   }
   .options {
@@ -1717,6 +1850,18 @@ body {
   }
   .team .glider-slide {
     min-width: 240px;
+  }
+  .about-container .about-content {
+    align-items: center;
+  }
+  .about-container .about-content .about-img {
+    height: 350px;
+  }
+  .contact-form {
+    margin: 10vh 3vw;
+  }
+  .contact-form iframe {
+    width: 90%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1777,12 +1922,19 @@ body {
   .team .glider-slide {
     min-width: 240px;
   }
+  .about-container .about-content {
+    text-align: center;
+  }
   .about-container .about-content > * {
     width: 100%;
     margin-top: 1em;
   }
+  .about-container .about-content .about-img {
+    height: 250px;
+  }
   .about-container .about-content .about-img img {
-    height: 350px;
+    height: 90%;
+    width: 70%;
   }
   .about-container .about-content .about-text {
     padding-right: 0;
@@ -1809,9 +1961,6 @@ body {
   .shop-content {
     padding: 0 3em;
   }
-  .car-details {
-    grid-template-columns: auto;
-  }
   .left {
     order: 2;
   }
@@ -1820,13 +1969,24 @@ body {
   }
   .car-details {
     padding: 1em 5vw;
+    grid-template-columns: auto;
+    margin: 10vh 0 2vh 0;
   }
   .car-details .car-main-detail {
     position: relative;
     right: 0;
   }
+  .car-details .car-main-detail .title {
+    font-size: clamp(18px, 1.8em, 2.8em);
+  }
+  .car-details .car-main-detail .car-data span {
+    font-size: clamp(16px, 1.3em, 1.7em);
+  }
   .related-cars {
     padding: 0em 5vw 2em 5vw;
+  }
+  .related-cars .related-products {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 687px) {
@@ -1854,6 +2014,10 @@ body {
   }
   .car-details .car-images-carousel .row {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .about-container .about-content .about-text .spec {
+    width: 100%;
+    padding-left: 0.3em;
   }
 }
 @media only screen and (max-width: 603px) {
@@ -1938,11 +2102,27 @@ body {
   .team .glider-slide {
     min-width: 220px;
   }
-  .contact-info > div {
+  .contact-info .contact-content > div {
     width: 80%;
   }
   .shop-content {
     padding: 0 0.5em;
+  }
+  .submit-car {
+    padding: 1em 5vw;
+  }
+  .submit-car p {
+    font-size: 1.3em;
+  }
+  .car-details .car-main-detail {
+    position: relative;
+    right: 0;
+  }
+  .car-details .car-main-detail .title {
+    font-size: clamp(18px, 1.5em, 2.25em);
+  }
+  .car-details .car-main-detail .car-data span {
+    font-size: clamp(16px, 1.2em, 1.7em);
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1973,6 +2153,11 @@ body {
     padding: 0.3em 0.7em;
     margin-bottom: 10px;
   }
+  .car-details .car-images-carousel .prev,
+  .car-details .car-images-carousel .next {
+    top: 20%;
+    margin-top: 0;
+  }
   .team .glider-contain .team-text .glider-prev {
     font-size: 17px;
   }
@@ -1984,6 +2169,7 @@ body {
   }
   .prom div > .box {
     width: 100%;
+    padding-bottom: 2.5em;
   }
   .shop-content {
     padding: 0 3em;
@@ -2040,6 +2226,21 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
+  .submit-car #sell_form .tab-title {
+    font-size: 1.45em;
+  }
+  .submit-car #sell_form .tab-5,
+  .submit-car #sell_form .tab-6 {
+    padding: 0 1em;
+  }
+  .submit-car #sell_form .car-image-label {
+    font-size: 18px;
+    width: 120px;
+    padding: 1em;
+  }
+  .submit-car #sell_form .radio-tab label {
+    margin: 0.5em;
+  }
   .shop-content {
     padding: 0 1.5em;
   }
@@ -2055,5 +2256,14 @@ body {
   }
   .car-details .car-images-carousel .row {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .car-details .car-main-detail .details {
+    padding: 1.5em 1.5em;
+  }
+  .contact-info {
+    margin-bottom: 5vh;
+  }
+  .contact-form {
+    margin-top: 5vh;
   }
 }

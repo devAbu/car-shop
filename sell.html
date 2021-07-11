@@ -140,6 +140,7 @@
               name="car-kilom"
               id="car-kilom"
               placeholder="Car Kilometre"
+              type="number"
             />
             <datalist id="kolms">
               <option value="Up to 5,000"></option>
@@ -188,7 +189,7 @@
 
         <!-- STEP 3 -->
         <div class="tab radio-tab">
-          <p>Additional Information</p>
+          <p class="tab-title">Additional Information</p>
           <br />
           <div>
             <p>Number of keys</p>
@@ -504,25 +505,31 @@
         </div>
 
         <!-- STEP 5 -->
-        <div class="tab">
+        <div class="tab tab-5">
           <p>Status</p>
         </div>
 
         <!-- STEP 6 -->
-        <div class="tab">
+        <div class="tab tab-6">
           <p>Photos</p>
 
           <div>
             <label for="car-images" class="car-image-label">
               <i class="fas fa-upload"></i> Car Images
             </label>
-            <input type="file" id="car-images" name="car-images" multiple />
+            <input
+              type="file"
+              id="car-images"
+              name="car-images"
+              multiple
+              required
+            />
           </div>
         </div>
 
         <!-- NEXT / PREVIOUS BUTTONS -->
         <div style="overflow: auto">
-          <div style="float: right">
+          <div style="float: right; text-align: center">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">
               Previous
             </button>
