@@ -872,6 +872,7 @@ body {
   row-gap: 1em;
   padding: 0 7em;
   padding-bottom: 2em;
+  margin-bottom: 1em;
 }
 .shop-content a {
   text-decoration: none;
@@ -913,7 +914,7 @@ body {
 }
 .shop-content .car-box .car-info .tags .year {
   background-color: #d01818;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   display: inline-block;
   vertical-align: middle;
   border-radius: 0.35rem;
@@ -1589,6 +1590,9 @@ body {
 }
 /* LARGE SCREENS */
 @media only screen and (min-width: 1600px) {
+  .shop-content {
+    grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+  }
   .shop-content .car-box .car-info .tags span {
     margin: 0.5em 0.5em;
   }
@@ -1960,6 +1964,9 @@ body {
   }
   .shop-content {
     padding: 0 3em;
+  }
+  .shop-content .car-box .car-info .tags .year {
+    padding: 0.2em;
   }
   .left {
     order: 2;
